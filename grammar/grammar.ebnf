@@ -1,0 +1,32 @@
+MyLang = expression;
+expression = term, {("+" | "*" | "~"), term};
+term = number | array | random | "(", expression, ")";
+
+number = integer | binary | hexa;
+integer = "0" | other;
+other = integerCif, {integerN};
+integerCif = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+integerN = "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+hexa = "0x", hexDigit ;
+hexDigit = "0" | otherHex;
+otherHex = hexaCif, {hexaN};
+hexaCif = integerCif |"A"|"B"|"C"|"D"|"E"|"F"|"a"|"b"|"c"|"d"|"e"|"f";
+hexaN = integerN |"A"|"B"|"C"|"D"|"E"|"F"|"a"|"b"|"c"|"d"|"e"|"f";
+binary = "b", binaryDigit, {binaryDigit};
+binaryDigit = "0" | "1";
+
+array = "[", arrayNumbers, "]";
+arrayNumbers = integerArray | binaryArray | hexaArray;
+integerArray = integer, {separator, integer};
+binaryArray = binary, {separator, binary};
+hexaArray = hexa, {separator, hexa};
+separator = "," | ", ";
+
+random = "rand(", [randArguments], ")";
+randType = "int" | "bin" | "hex";
+
+randArguments = [integer, separator, integer], [[separator], integer], [[separator], randType];
+NEBO:
+randArguments = arg, [separator, arg], [separator, arg];
+arg = integer, separator, integer | integer | randType;
+
