@@ -1572,37 +1572,37 @@ yyreduce:
 
   case 29:
 #line 146 "my_language.y"
-    {printf("Rule28");}
+    {printf("Rule28\n");}
     break;
 
   case 30:
 #line 147 "my_language.y"
-    {printf("Rule29");}
+    {printf("Rule29\n");}
     break;
 
   case 31:
 #line 148 "my_language.y"
-    {printf("Rule30");}
+    {printf("Rule30\n");}
     break;
 
   case 32:
 #line 149 "my_language.y"
-    {printf("Rule31");}
+    {printf("Rule31\n");}
     break;
 
   case 33:
 #line 150 "my_language.y"
-    {printf("Rule32");}
+    {printf("Rule32\n");}
     break;
 
   case 34:
 #line 151 "my_language.y"
-    {printf("Rule33");}
+    {printf("Rule33\n");}
     break;
 
   case 35:
 #line 152 "my_language.y"
-    {printf("Rule34");}
+    {printf("Rule34\n");}
     break;
 
   case 36:
