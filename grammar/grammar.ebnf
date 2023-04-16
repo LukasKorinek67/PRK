@@ -26,6 +26,7 @@ random = "rand(", [randArguments], ")";
 randType = "int" | "bin" | "hex";
 
 randArguments = [integer, separator, integer], [[separator], integer], [[separator], randType];
+
 NEBO:
 randArguments = arg, [separator, arg], [separator, arg];
 arg = integer, separator, integer | integer | randType;

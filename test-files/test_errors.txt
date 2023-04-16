@@ -1,0 +1,59 @@
+#Data k testování
+
+#Samotné hodnoty:
+23a
+.67
+12a
+0xxA
+0x12CFZ
+bb010001
+#067
+
+#Array:
+[1.5,2.1,4.3,7.2,12.1]
+[0xAB, 0x88, 0xFF1Z, 0x1F]
+[b10, b1, 10101, 1000001, 010, 0000101]
+[,,]
+[bin]
+
+#Nespárované sčítání:
+0+
++0xACC
+
+#Nespárované násobení:
+35*
+*0xACC
+9*b1001*0xC44B*
+
+#Nespárované ~
+2~
+~88
+b0100110~b111111~
+
+#Zdvojené operátory
+0**0
+100*+1011
+10~~10
+10+10*+10*10~10
+
+
+
+#Operace s array
+
+
+#Závorky
+(10+10*10)*(10+10
+10+10*10)*(10+10)
+3~(3*(2+5)
+(2+4)*(3+7))
+
+#Rand funkce
+rand(ashk)
+rand(binn)
+rand(3,8.5)
+rand(1,200,hexa)
+rand(312.3)
+rand(12a,hex)
+rand(20,120,5,6,8)
+rand(100,1000,40,integer)
+
