@@ -1,6 +1,12 @@
-# PRK
+# PRK - vlastní jazyk
 
 1. OPERACE - vlastní operace ~ -> daný dvě čísla vynásobí a přičte k výsledku hodnotu druhého čísla -> a~b = a*b + b
+- celkově tedy operace +, * a ~
+- pririty jsou řešeny následovně:
+	- nejvyšší prioritu má vlastní operace ~
+	- druhou nejvyšší prioritu má násobení *
+	- nejnižší prioritu má sčítání +
+
 
 2. DATOVÉ TYPY - (integer), hexadecimální čísla (0x...), binární čísla (b10010) a array (v hranatých závorkách, čísla oddělené čárkou)
 - sčítání, násobení a ~ -> výsledkem bude vždy datový typ prvního čísla -> tzn. OxA + 21 = 0x1F

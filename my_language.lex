@@ -42,7 +42,7 @@ void print_msg(char *msg);
         mpy_ops=process_pattern(mpy_ops,"Multiplication operator detected.",PATT_MPY);
         return MPY;
         }
-~     {
+"~"     {
         til_ops=process_pattern(til_ops,"Tilde operator detected.",PATT_TIL);
         return TILDE;
         }
@@ -113,7 +113,7 @@ rand\(  {
         lines_done++;
         //print_msg("Line detected.\n");
         printf("Line detected.\n");
-        //return LINE_END;
+        return LINE_END;
         }
 
 [ \t]+ ; /*Skip whitespace*/
@@ -157,7 +157,7 @@ void print_error(int ERRNO){
 int process_pattern(int number,char* Message, int Pattern) {
     if (Pattern == PATT_ERR) {       
         print_error(ERR_PATTERN);        
-        //exit(ERR_PATTERN);
+        exit(ERR_PATTERN);
     }    
 
     print_msg(Message);

@@ -931,7 +931,7 @@ YY_RULE_SETUP
         lines_done++;
         //print_msg("Line detected.\n");
         printf("Line detected.\n");
-        //return LINE_END;
+        return LINE_END;
         }
 	YY_BREAK
 case 19:
@@ -1989,7 +1989,7 @@ void print_error(int ERRNO){
 int process_pattern(int number,char* Message, int Pattern) {
     if (Pattern == PATT_ERR) {       
         print_error(ERR_PATTERN);        
-        //exit(ERR_PATTERN);
+        exit(ERR_PATTERN);
     }    
 
     print_msg(Message);

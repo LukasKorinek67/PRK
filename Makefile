@@ -40,9 +40,11 @@ parser:
 #	@make -s subclean
 
 test_ok:
+	echo "Processing test_ok file.."
 	@./$(BINDIR)/$(PARSER_BIN) < $(TESTDIR)/$(TEST_OK_FILE) >$(BINDIR)/$(TEST_OK_FILE).report
 test_errors:
-	@./$(BINDIR)/$(PARSER_BIN) < $(TESTDIR)/$(TEST_ERRORS_FILE) >$(BINDIR)/$(TEST_ERRORS_FILE).report
+	echo "Processing test_errors file.."
+	@./$(BINDIR)/$(PARSER_BIN) < $(TESTDIR)/$(TEST_ERRORS_FILE) >$(BINDIR)/$(TEST_ERRORS_FILE).report 2>&1 || true
 
 subclean:
 	@rm -rf lex.yy.c

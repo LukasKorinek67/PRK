@@ -1,417 +1,717 @@
 Entering the main
 Void line detected.
+Rule13 - INTEGER
+Line detected.
 Rule11
-Line detected.
-Rule8
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule2
+----- Syntax OK, Rule2 -----
+Rule13 - INTEGER
+Line detected.
 Rule11
-Line detected.
-Rule8
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule13
+----- Syntax OK, Rule1 -----
+Rule15 - HEXA
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule13
+----- Syntax OK, Rule1 -----
+Rule15 - HEXA
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule12
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule12
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
 Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
 Void line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule20
-Rule21
-Rule21
-Rule21
-Rule21
-Rule17
-Rule16
-Rule14
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule24
-Rule25
-Rule25
-Rule25
-Rule19
-Rule16
-Rule14
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
 Rule22
 Rule23
 Rule23
 Rule23
 Rule23
-Rule23
+Rule19 - int array
 Rule18
 Rule16
-Rule14
 Line detected.
-Void line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
 Rule11
-Rule8
-Rule6
-Rule11
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Syntax OK, Rule1
-Rule12
-Rule8
-Rule6
-Rule13
-Line detected.
-Void line detected.
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule11
-Line detected.
-Rule8
 Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule12
-Rule13
-Line detected.
-Rule8
-Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule12
-Rule13
-Line detected.
-Void line detected.
-Rule8
-Rule7
-Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
 Rule9
-Line detected.
-Rule8
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule11
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule9
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule12
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule12
-Rule9
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule13
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule13
-Rule9
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule13
-Rule9
-Line detected.
-Void line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule20
-Rule21
-Rule17
-Rule16
-Rule14
-Rule11
-Line detected.
-Rule8
-Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule22
-Rule23
-Rule23
-Rule18
-Rule16
-Rule14
-Rule8
-Rule6
-Rule13
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Syntax OK, Rule1
-Rule12
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule24
-Rule25
-Rule25
-Rule25
-Rule19
-Rule16
-Rule14
-Rule9
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule20
-Rule21
-Rule21
-Rule21
-Rule17
-Rule16
-Rule14
-Rule22
-Rule23
-Rule23
-Rule23
-Rule18
-Rule16
-Rule14
-Line detected.
-Void line detected.
-Rule8
-Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule8
-Rule6
-Rule11
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Rule10
-Rule11
-Rule8
-Rule6
-Rule11
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Rule10
-Line detected.
-Rule8
-Rule7
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule11
-Rule11
-Rule8
-Rule6
-Rule11
-Rule8
-Rule6
-Rule5
-Rule4
-Rule3
-Rule10
-Rule8
-Rule7
-Rule6
-Rule5
-Rule3
-Rule10
-Rule9
-Line detected.
-Void line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule34
+----- Syntax OK, Rule1 -----
 Rule26
-Rule15
-Line detected.
-Rule8
-Rule6
-Rule5
-Rule3
-Syntax OK, Rule1
-Rule36
 Rule27
-Rule26
-Rule15
+Rule27
+Rule27
+Rule21 - hexarray
+Rule18
+Rule16
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
+----- Syntax OK, Rule1 -----
+Rule24
+Rule25
+Rule25
+Rule25
+Rule25
+Rule25
+Rule20 - bin array
+Rule18
+Rule16
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
+Rule11
+Rule7
+Rule9
+Rule6
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
+Rule11
+Rule7
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule14 - BINARY
+Rule11
+Rule7
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule13 - INTEGER
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
+Rule14 - BINARY
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule15 - HEXA
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule22
+Rule23
+Rule19 - int array
+Rule18
+Rule16
+Rule11
+Rule7
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule24
+Rule25
+Rule25
+Rule20 - bin array
+Rule18
+Rule16
+Rule11
+Rule7
+Rule9
+Rule6
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule14 - BINARY
+Rule26
+Rule27
+Rule27
+Rule27
+Rule21 - hexarray
+Rule18
+Rule16
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule22
+Rule23
+Rule23
+Rule23
+Rule19 - int array
+Rule18
+Rule16
+Rule11
+Rule7
+Rule24
+Rule25
+Rule25
+Rule25
+Rule20 - bin array
+Rule18
+Rule16
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Rule11
+Rule7
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+Rule12 - závorky
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule36 - rand()
 Rule28
-Rule26
-Rule15
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule37
-Rule29
-Rule26
-Rule15
+----- Syntax OK, Rule1 -----
+Rule38 - type bin
+Rule29 - rand(type)
+Rule28
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule30
-Rule26
-Rule15
+----- Syntax OK, Rule1 -----
+Rule30 - rand(x,y)
+Rule28
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule37
-Rule31
-Rule26
-Rule15
+----- Syntax OK, Rule1 -----
+Rule39 - type hex
+Rule31 - rand(x,y,type)
+Rule28
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule32
-Rule26
-Rule15
+----- Syntax OK, Rule1 -----
+Rule32 - rand(n)
+Rule28
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
-Rule35
-Rule33
-Rule26
-Rule15
+----- Syntax OK, Rule1 -----
+Rule39 - type hex
+Rule33 - rand(n,type)
+Rule28
+Rule17 - random
 Line detected.
-Rule8
+Rule11
+Rule7
+Rule9
 Rule6
 Rule5
 Rule3
-Syntax OK, Rule1
+----- Syntax OK, Rule1 -----
+Rule34 - rand(x,y,n)
+Rule28
+Rule17 - random
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Rule37 - type int
+Rule35 - rand(x,y,n,type)
+Rule28
+Rule17 - random
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule3
+----- Syntax OK, Rule1 -----
+Void line detected.
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule15 - HEXA
+Rule11
+Rule7
+Rule9
+Rule6
+Rule15 - HEXA
+Rule11
+Rule7
+Rule15 - HEXA
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule15 - HEXA
+Rule11
+Rule7
+Rule15 - HEXA
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule13 - INTEGER
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule10 - operator ~ 
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER
+Rule11
+Rule7
+Rule13 - INTEGER
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Out of main.
