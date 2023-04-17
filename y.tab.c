@@ -167,14 +167,11 @@ data_type ::= "hex"
 
 */
 
-
 #include <stdio.h>
-//#include "prk-stack.h"
-//#include "prints.h"
 
 int yylex();
 void yyerror(const char *s);
-extern int yylineno, yylval;
+extern int yylineno;
 
 
 
@@ -197,7 +194,15 @@ extern int yylineno, yylval;
 #endif
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+typedef union YYSTYPE
+#line 70 "my_language.y"
+{
+  int int_value;
+  char* str_value;
+}
+/* Line 193 of yacc.c.  */
+#line 205 "y.tab.c"
+	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 # define YYSTYPE_IS_TRIVIAL 1
@@ -209,7 +214,7 @@ typedef int YYSTYPE;
 
 
 /* Line 216 of yacc.c.  */
-#line 213 "y.tab.c"
+#line 218 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -507,11 +512,11 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    91,    91,    92,    96,   100,   101,   105,   109,   113,
-     114,   118,   119,   123,   124,   125,   126,   127,   128,   132,
-     136,   137,   138,   142,   143,   147,   148,   152,   153,   157,
-     161,   162,   163,   164,   165,   166,   167,   168,   172,   173,
-     174
+       0,    95,    95,    96,   100,   104,   105,   109,   113,   117,
+     118,   122,   123,   127,   128,   129,   130,   131,   132,   136,
+     140,   141,   142,   146,   147,   151,   152,   156,   157,   161,
+     165,   166,   167,   168,   169,   170,   171,   172,   176,   177,
+     178
 };
 #endif
 
@@ -1451,203 +1456,203 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 91 "my_language.y"
+#line 95 "my_language.y"
     { printf("----- Syntax OK, Rule1 -----\n"); }
     break;
 
   case 3:
-#line 92 "my_language.y"
+#line 96 "my_language.y"
     { printf("----- Syntax OK, Rule2 -----\n");}
     break;
 
   case 4:
-#line 96 "my_language.y"
+#line 100 "my_language.y"
     {printf("Rule3\n");}
     break;
 
   case 5:
-#line 100 "my_language.y"
+#line 104 "my_language.y"
     {printf("Rule4 - operator +\n");}
     break;
 
   case 6:
-#line 101 "my_language.y"
+#line 105 "my_language.y"
     {printf("Rule5\n");}
     break;
 
   case 7:
-#line 105 "my_language.y"
+#line 109 "my_language.y"
     {printf("Rule6\n");}
     break;
 
   case 8:
-#line 109 "my_language.y"
+#line 113 "my_language.y"
     {printf("Rule7\n");}
     break;
 
   case 9:
-#line 113 "my_language.y"
+#line 117 "my_language.y"
     {printf("Rule8 - operator * \n");}
     break;
 
   case 10:
-#line 114 "my_language.y"
+#line 118 "my_language.y"
     {printf("Rule9\n");}
     break;
 
   case 11:
-#line 118 "my_language.y"
+#line 122 "my_language.y"
     {printf("Rule10 - operator ~ \n");}
     break;
 
   case 12:
-#line 119 "my_language.y"
+#line 123 "my_language.y"
     {printf("Rule11\n");}
     break;
 
   case 13:
-#line 123 "my_language.y"
+#line 127 "my_language.y"
     {printf("Rule12 - závorky\n");}
     break;
 
   case 14:
-#line 124 "my_language.y"
-    {printf("Rule13 - INTEGER\n");}
+#line 128 "my_language.y"
+    {printf("Rule13 - INTEGER (%d)\n", yylval.int_value);}
     break;
 
   case 15:
-#line 125 "my_language.y"
-    {printf("Rule14 - BINARY\n");}
+#line 129 "my_language.y"
+    {printf("Rule14 - BINARY (%s)\n", yylval.str_value);}
     break;
 
   case 16:
-#line 126 "my_language.y"
-    {printf("Rule15 - HEXA\n");}
+#line 130 "my_language.y"
+    {printf("Rule15 - HEXA (%s)\n", yylval.str_value);}
     break;
 
   case 17:
-#line 127 "my_language.y"
+#line 131 "my_language.y"
     {printf("Rule16\n");}
     break;
 
   case 18:
-#line 128 "my_language.y"
+#line 132 "my_language.y"
     {printf("Rule17 - random\n");}
     break;
 
   case 19:
-#line 132 "my_language.y"
+#line 136 "my_language.y"
     {printf("Rule18\n");}
     break;
 
   case 20:
-#line 136 "my_language.y"
+#line 140 "my_language.y"
     {printf("Rule19 - int array\n");}
     break;
 
   case 21:
-#line 137 "my_language.y"
+#line 141 "my_language.y"
     {printf("Rule20 - bin array\n");}
     break;
 
   case 22:
-#line 138 "my_language.y"
+#line 142 "my_language.y"
     {printf("Rule21 - hexarray\n");}
     break;
 
   case 23:
-#line 142 "my_language.y"
+#line 146 "my_language.y"
     {printf("Rule22\n");}
     break;
 
   case 24:
-#line 143 "my_language.y"
+#line 147 "my_language.y"
     {printf("Rule23\n");}
     break;
 
   case 25:
-#line 147 "my_language.y"
+#line 151 "my_language.y"
     {printf("Rule24\n");}
     break;
 
   case 26:
-#line 148 "my_language.y"
+#line 152 "my_language.y"
     {printf("Rule25\n");}
     break;
 
   case 27:
-#line 152 "my_language.y"
+#line 156 "my_language.y"
     {printf("Rule26\n");}
     break;
 
   case 28:
-#line 153 "my_language.y"
+#line 157 "my_language.y"
     {printf("Rule27\n");}
     break;
 
   case 29:
-#line 157 "my_language.y"
+#line 161 "my_language.y"
     {printf("Rule28\n");}
     break;
 
   case 30:
-#line 161 "my_language.y"
+#line 165 "my_language.y"
     {printf("Rule29 - rand(type)\n");}
     break;
 
   case 31:
-#line 162 "my_language.y"
+#line 166 "my_language.y"
     {printf("Rule30 - rand(x,y)\n");}
     break;
 
   case 32:
-#line 163 "my_language.y"
+#line 167 "my_language.y"
     {printf("Rule31 - rand(x,y,type)\n");}
     break;
 
   case 33:
-#line 164 "my_language.y"
+#line 168 "my_language.y"
     {printf("Rule32 - rand(n)\n");}
     break;
 
   case 34:
-#line 165 "my_language.y"
+#line 169 "my_language.y"
     {printf("Rule33 - rand(n,type)\n");}
     break;
 
   case 35:
-#line 166 "my_language.y"
+#line 170 "my_language.y"
     {printf("Rule34 - rand(x,y,n)\n");}
     break;
 
   case 36:
-#line 167 "my_language.y"
+#line 171 "my_language.y"
     {printf("Rule35 - rand(x,y,n,type)\n");}
     break;
 
   case 37:
-#line 168 "my_language.y"
+#line 172 "my_language.y"
     {printf("Rule36 - rand()\n");}
     break;
 
   case 38:
-#line 172 "my_language.y"
-    {printf("Rule37 - type int\n");}
+#line 176 "my_language.y"
+    {printf("Rule37 - rand type int\n");}
     break;
 
   case 39:
-#line 173 "my_language.y"
-    {printf("Rule38 - type bin\n");}
+#line 177 "my_language.y"
+    {printf("Rule38 - rand type bin\n");}
     break;
 
   case 40:
-#line 174 "my_language.y"
-    {printf("Rule39 - type hex\n");}
+#line 178 "my_language.y"
+    {printf("Rule39 - rand type hex\n");}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1651 "y.tab.c"
+#line 1656 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1861,8 +1866,7 @@ yyreturn:
 }
 
 
-#line 177 "my_language.y"
-
+#line 180 "my_language.y"
 
 
 
@@ -1872,9 +1876,6 @@ void yyerror(const char* s) {
 
 int main(){
     // yydebug = 1;
-    //debug_print("Entering the main");
-    printf("Entering the main\n");
     yyparse();
-    printf("Out of main.\n");
 }
 

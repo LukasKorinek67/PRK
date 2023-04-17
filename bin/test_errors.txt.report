@@ -1,0 +1,290 @@
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (23)
+error: 23a
+
+error: .67
+
+Rule13 - INTEGER (12)
+error: 12a
+
+Rule13 - INTEGER (0)
+error: 0xxA
+
+Rule15 - HEXA (0x12CF)
+error: 0x12CFZ
+
+error: bb010001
+
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule22
+error: [1.5,2.1,4.3,7.2,12.1]
+
+Rule26
+Rule27
+Rule27
+error: [0xAB, 0x88, 0xFF1Z, 0x1F]
+
+Rule24
+Rule25
+syntax error
+syntax error
+syntax error
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (0)
+Rule11
+Rule7
+Rule9
+Rule6
+Line detected.
+syntax error
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (35)
+Rule11
+Rule7
+Line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (9)
+Rule11
+Rule7
+Rule14 - BINARY (b1001)
+Rule11
+Rule7
+Rule15 - HEXA (0xC44B)
+Rule11
+Rule7
+Line detected.
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (2)
+Line detected.
+syntax error
+syntax error
+Rule14 - BINARY (b0100110)
+Rule14 - BINARY (b111111)
+Line detected.
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (0)
+Rule11
+Rule7
+syntax error
+Rule13 - INTEGER (100)
+Rule11
+Rule7
+syntax error
+Rule13 - INTEGER (10)
+syntax error
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule22
+Rule23
+Rule19 - int array
+Rule18
+Rule16
+Rule11
+Rule7
+Line detected.
+syntax error
+syntax error
+Rule22
+Rule23
+Rule23
+Rule23
+Rule19 - int array
+Rule18
+Rule16
+Rule11
+Rule7
+Rule24
+Rule25
+Rule25
+Rule25
+Rule20 - bin array
+Rule18
+Rule16
+Rule11
+Rule7
+Line detected.
+syntax error
+Void line detected.
+syntax error
+syntax error
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Rule11
+Rule7
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (10)
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+syntax error
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule13 - INTEGER (10)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+syntax error
+Rule13 - INTEGER (3)
+Rule13 - INTEGER (3)
+Rule11
+Rule7
+Rule13 - INTEGER (2)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (5)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+syntax error
+Rule13 - INTEGER (2)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (4)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Rule11
+Rule7
+Rule13 - INTEGER (3)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (7)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+Rule12 - závorky
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule3
+syntax error
+Void line detected.
+syntax error
+syntax error
+error: rand(ashk)
+
+Rule38 - rand type bin
+Rule29 - rand(type)
+error: rand(binn)
+
+error: rand(3,8.5)
+
+Rule39 - rand type hex
+Rule31 - rand(x,y,type)
+error: rand(1,200,hexa)
+
+error: rand(312.3)
+
+error: rand(12a,hex)
+
+syntax error
+Rule37 - rand type int
+Rule35 - rand(x,y,n,type)
+error: rand(100,1000,40,integer)
+
+Void line detected.
+syntax error

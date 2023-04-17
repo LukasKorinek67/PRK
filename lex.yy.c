@@ -829,7 +829,7 @@ YY_RULE_SETUP
 #line 57 "my_language.lex"
 {
         int_values=process_pattern(int_values,"Integer number detected.", PATT_INT);   
-        //yylval = atoi(yytext);              
+        yylval.int_value = atoi(yytext);              
         return INTEGER;
         }
 	YY_BREAK
@@ -838,7 +838,7 @@ YY_RULE_SETUP
 #line 62 "my_language.lex"
 {
         bin_values=process_pattern(bin_values,"Binary number detected.", PATT_BIN);   
-        //yylval = atoi(yytext);              
+        yylval.str_value = strdup(yytext);            
         return BINARY;
         }
 	YY_BREAK
@@ -847,7 +847,7 @@ YY_RULE_SETUP
 #line 67 "my_language.lex"
 {
         hex_values=process_pattern(hex_values,"Hexadecimal number detected.", PATT_HEX);   
-        //yylval = atoi(yytext);              
+        yylval.str_value = strdup(yytext);        
         return HEXA;
         }
 	YY_BREAK
@@ -855,69 +855,62 @@ case 10:
 YY_RULE_SETUP
 #line 72 "my_language.lex"
 {
-        array_start=process_pattern(array_start,"Start of array detected.", PATT_ARRAY_START);   
-        //yylval = atoi(yytext);              
+        array_start=process_pattern(array_start,"Start of array detected.", PATT_ARRAY_START);                 
         return ARRAY_START;
         }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 77 "my_language.lex"
+#line 76 "my_language.lex"
 {
-        array_end=process_pattern(array_end,"End of array detected.", PATT_ARRAY_END);   
-        //yylval = atoi(yytext);              
+        array_end=process_pattern(array_end,"End of array detected.", PATT_ARRAY_END);                 
         return ARRAY_END;
         }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 82 "my_language.lex"
+#line 80 "my_language.lex"
 {
-        rand_function=process_pattern(rand_function,"Random function detected.", PATT_RAND);   
-        //yylval = atoi(yytext);              
+        rand_function=process_pattern(rand_function,"Random function detected.", PATT_RAND);                 
         return RAND;
         }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 87 "my_language.lex"
+#line 84 "my_language.lex"
 {
-        separator=process_pattern(separator,"Separator detected.", PATT_SEPARATOR);   
-        //yylval = atoi(yytext);              
+        separator=process_pattern(separator,"Separator detected.", PATT_SEPARATOR);                
         return SEPARATOR;
         }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 92 "my_language.lex"
+#line 88 "my_language.lex"
 {
-        type_int=process_pattern(type_int,"Data type int detected.", PATT_TYPE_INT);   
-        //yylval = atoi(yytext);              
+        type_int=process_pattern(type_int,"Data type int detected.", PATT_TYPE_INT);              
         return INT_TYPE;
         }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 97 "my_language.lex"
+#line 92 "my_language.lex"
 {
-        type_bin=process_pattern(type_bin,"Data type bin detected.", PATT_TYPE_BIN);   
-        //yylval = atoi(yytext);              
+        type_bin=process_pattern(type_bin,"Data type bin detected.", PATT_TYPE_BIN);               
         return BIN_TYPE;
         }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 102 "my_language.lex"
+#line 96 "my_language.lex"
 {
-        type_hex=process_pattern(type_hex,"Data type hex detected.", PATT_TYPE_HEX);   
-        //yylval = atoi(yytext);              
+        type_hex=process_pattern(type_hex,"Data type hex detected.", PATT_TYPE_HEX);            
         return HEX_TYPE;
         }
 	YY_BREAK
 case 17:
 /* rule 17 can match eol */
 YY_RULE_SETUP
-#line 107 "my_language.lex"
+#line 100 "my_language.lex"
 {        
         void_lines_done++;        
         //print_msg("Void line detected.\n");
@@ -926,7 +919,7 @@ YY_RULE_SETUP
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 112 "my_language.lex"
+#line 105 "my_language.lex"
 {
         lines_done++;
         //print_msg("Line detected.\n");
@@ -936,20 +929,20 @@ YY_RULE_SETUP
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 119 "my_language.lex"
+#line 112 "my_language.lex"
 ; /*Skip whitespace*/
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 121 "my_language.lex"
+#line 114 "my_language.lex"
 {errors_detected=process_pattern(errors_detected,"An error detected.\n",PATT_ERR);} /* What is not from alphabet: lexer error  */
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 122 "my_language.lex"
+#line 115 "my_language.lex"
 ECHO;
 	YY_BREAK
-#line 953 "lex.yy.c"
+#line 946 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1949,7 +1942,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 122 "my_language.lex"
+#line 115 "my_language.lex"
 
 
 
@@ -1974,9 +1967,9 @@ return 1;
 
 
 void print_msg(char *msg){
-    #ifdef VERBOSE
-        printf("%s",msg);
-    #endif
+        #ifdef VERBOSE
+                printf("%s",msg);
+        #endif
 }
 
 void print_error(int ERRNO){
@@ -1993,7 +1986,6 @@ int process_pattern(int number,char* Message, int Pattern) {
     }    
 
     print_msg(Message);
-    //printf("%s",Message);
     
     number++;
     return number;

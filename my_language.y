@@ -58,16 +58,20 @@ data_type ::= "hex"
 
 */
 
-
 #include <stdio.h>
-//#include "prk-stack.h"
-//#include "prints.h"
 
 int yylex();
 void yyerror(const char *s);
-extern int yylineno, yylval;
+extern int yylineno;
 
 %}
+
+// yylval - možnost uložení int i stringu
+%union {
+  int int_value;
+  char* str_value;
+}
+
 %token INTEGER
 %token BINARY
 %token HEXA
@@ -121,12 +125,12 @@ operation:
 
 factor:
     L_BR expression R_BR {printf("Rule12 - závorky\n");} //Rule12
-    | INTEGER {printf("Rule13 - INTEGER\n");} //Rule13
-    | BINARY {printf("Rule14 - BINARY\n");} //Rule14
-    | HEXA {printf("Rule15 - HEXA\n");} //Rule15
+    | INTEGER {printf("Rule13 - INTEGER (%d)\n", yylval.int_value);} //Rule13
+    | BINARY {printf("Rule14 - BINARY (%s)\n", yylval.str_value);} //Rule14
+    | HEXA {printf("Rule15 - HEXA (%s)\n", yylval.str_value);} //Rule15
     | array {printf("Rule16\n");} //Rule16
     | random {printf("Rule17 - random\n");} //Rule17
-   ;
+    ;
 
 array:
     ARRAY_START arrayNumbers ARRAY_END {printf("Rule18\n");}; //Rule18
@@ -169,13 +173,11 @@ rand_args:
     ;
   
 data_type:
-    INT_TYPE {printf("Rule37 - type int\n");} //Rule37
-    | BIN_TYPE {printf("Rule38 - type bin\n");} //Rule38
-    | HEX_TYPE {printf("Rule39 - type hex\n");} //Rule39
+    INT_TYPE {printf("Rule37 - rand type int\n");} //Rule37
+    | BIN_TYPE {printf("Rule38 - rand type bin\n");} //Rule38
+    | HEX_TYPE {printf("Rule39 - rand type hex\n");} //Rule39
     ;
-
 %%
-
 
 
 void yyerror(const char* s) {   
@@ -184,8 +186,5 @@ void yyerror(const char* s) {
 
 int main(){
     // yydebug = 1;
-    //debug_print("Entering the main");
-    printf("Entering the main\n");
     yyparse();
-    printf("Out of main.\n");
 }

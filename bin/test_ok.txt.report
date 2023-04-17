@@ -1,6 +1,5 @@
-Entering the main
 Void line detected.
-Rule13 - INTEGER
+Rule13 - INTEGER (67)
 Line detected.
 Rule11
 Rule7
@@ -9,7 +8,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule2 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (12)
 Line detected.
 Rule11
 Rule7
@@ -18,7 +17,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule15 - HEXA
+Rule15 - HEXA (0x99)
 Line detected.
 Rule11
 Rule7
@@ -27,7 +26,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule15 - HEXA
+Rule15 - HEXA (0x12CF)
 Line detected.
 Rule11
 Rule7
@@ -36,7 +35,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
+Rule14 - BINARY (b010001)
 Line detected.
 Rule11
 Rule7
@@ -45,7 +44,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
+Rule14 - BINARY (b10000000)
 Line detected.
 Rule11
 Rule7
@@ -104,12 +103,12 @@ Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
 Void line detected.
-Rule13 - INTEGER
+Rule13 - INTEGER (0)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (23)
 Line detected.
 Rule11
 Rule7
@@ -119,12 +118,12 @@ Rule5
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
+Rule14 - BINARY (b10010110)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule15 - HEXA
+Rule15 - HEXA (0xACC)
 Line detected.
 Rule11
 Rule7
@@ -135,10 +134,10 @@ Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
 Void line detected.
-Rule13 - INTEGER
+Rule13 - INTEGER (35)
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Line detected.
 Rule11
 Rule7
@@ -150,10 +149,10 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
+Rule14 - BINARY (b10010110)
 Rule11
 Rule7
-Rule15 - HEXA
+Rule15 - HEXA (0xACC)
 Line detected.
 Rule11
 Rule7
@@ -165,13 +164,13 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (9)
 Rule11
 Rule7
-Rule14 - BINARY
+Rule14 - BINARY (b1001)
 Rule11
 Rule7
-Rule15 - HEXA
+Rule15 - HEXA (0xC44B)
 Line detected.
 Rule11
 Rule7
@@ -187,8 +186,8 @@ Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
 Void line detected.
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
+Rule13 - INTEGER (34)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -198,8 +197,8 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (4444)
+Rule13 - INTEGER (88)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -209,8 +208,8 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
-Rule14 - BINARY
+Rule14 - BINARY (b0100110)
+Rule14 - BINARY (b111111)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -220,8 +219,8 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule15 - HEXA
-Rule15 - HEXA
+Rule15 - HEXA (0xAA)
+Rule15 - HEXA (0xBB)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -231,8 +230,8 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule15 - HEXA
+Rule13 - INTEGER (2)
+Rule15 - HEXA (0xAC)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -250,7 +249,7 @@ Rule18
 Rule16
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Line detected.
 Rule11
 Rule7
@@ -272,7 +271,7 @@ Rule11
 Rule7
 Rule9
 Rule6
-Rule15 - HEXA
+Rule15 - HEXA (0xADDD)
 Line detected.
 Rule11
 Rule7
@@ -282,7 +281,7 @@ Rule5
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule14 - BINARY
+Rule14 - BINARY (b1001)
 Rule26
 Rule27
 Rule27
@@ -327,12 +326,12 @@ Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
 Void line detected.
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (4)
 Rule11
 Rule7
 Rule9
@@ -343,12 +342,12 @@ Rule3
 Rule12 - závorky
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (7)
 Rule11
 Rule7
 Rule9
@@ -368,16 +367,16 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
+Rule13 - INTEGER (3)
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (5)
 Rule11
 Rule7
 Rule9
@@ -417,7 +416,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule38 - type bin
+Rule38 - rand type bin
 Rule29 - rand(type)
 Rule28
 Rule17 - random
@@ -440,7 +439,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule39 - type hex
+Rule39 - rand type hex
 Rule31 - rand(x,y,type)
 Rule28
 Rule17 - random
@@ -463,7 +462,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule39 - type hex
+Rule39 - rand type hex
 Rule33 - rand(n,type)
 Rule28
 Rule17 - random
@@ -486,7 +485,7 @@ Rule6
 Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule37 - type int
+Rule37 - rand type int
 Rule35 - rand(x,y,n,type)
 Rule28
 Rule17 - random
@@ -499,15 +498,15 @@ Rule5
 Rule3
 ----- Syntax OK, Rule1 -----
 Void line detected.
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (9)
 Rule11
 Rule7
 Rule9
@@ -515,7 +514,7 @@ Rule6
 Rule9
 Rule8 - operator * 
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Line detected.
 Rule11
 Rule7
@@ -526,19 +525,19 @@ Rule4 - operator +
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
+Rule13 - INTEGER (9)
 Rule11
 Rule10 - operator ~ 
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Line detected.
 Rule11
 Rule7
@@ -549,113 +548,17 @@ Rule4 - operator +
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (4)
 Rule11
 Rule7
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (8)
+Rule13 - INTEGER (9)
 Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule15 - HEXA
-Rule11
-Rule7
-Rule9
-Rule6
-Rule15 - HEXA
-Rule11
-Rule7
-Rule15 - HEXA
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule15 - HEXA
-Rule11
-Rule7
-Rule15 - HEXA
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER
-Rule13 - INTEGER
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule13 - INTEGER
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER
-Rule13 - INTEGER
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule13 - INTEGER
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER
-Rule11
-Rule7
-Rule13 - INTEGER
-Rule13 - INTEGER
 Rule11
 Rule10 - operator ~ 
 Rule7
@@ -664,7 +567,80 @@ Rule6
 Rule9
 Rule8 - operator * 
 Rule6
-Rule13 - INTEGER
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule15 - HEXA (0x3)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule15 - HEXA (0x1)
+Rule11
+Rule7
+Rule15 - HEXA (0x3)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule15 - HEXA (0xA)
+Rule11
+Rule7
+Rule15 - HEXA (0xB)
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER (3)
+Rule11
+Rule7
+Rule9
+Rule6
+Rule13 - INTEGER (1)
+Rule13 - INTEGER (3)
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule13 - INTEGER (2)
+Line detected.
+Rule11
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule5
+Rule4 - operator +
+Rule3
+----- Syntax OK, Rule1 -----
+Rule13 - INTEGER (2)
+Rule11
+Rule7
+Rule13 - INTEGER (2)
+Rule13 - INTEGER (2)
+Rule11
+Rule10 - operator ~ 
+Rule7
+Rule9
+Rule6
+Rule9
+Rule8 - operator * 
+Rule6
+Rule13 - INTEGER (2)
 Line detected.
 Rule11
 Rule7
@@ -674,14 +650,14 @@ Rule5
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
-Rule13 - INTEGER
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
+Rule13 - INTEGER (2)
+Rule13 - INTEGER (2)
 Line detected.
 Rule11
 Rule10 - operator ~ 
@@ -693,15 +669,15 @@ Rule5
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Rule13 - INTEGER
+Rule13 - INTEGER (2)
 Rule11
 Rule7
 Rule9
 Rule6
-Rule13 - INTEGER
+Rule13 - INTEGER (3)
 Rule11
 Rule7
-Rule13 - INTEGER
+Rule13 - INTEGER (9)
 Line detected.
 Rule11
 Rule7
@@ -714,4 +690,3 @@ Rule5
 Rule4 - operator +
 Rule3
 ----- Syntax OK, Rule1 -----
-Out of main.

@@ -1,33 +1,54 @@
-MyLang = expression;
-expression = term, {("+" | "*" | "~"), term};
-term = number | array | random | "(", expression, ")";
+MyLang ::= expression
 
-number = integer | binary | hexa;
-integer = "0" | other;
-other = integerCif, {integerN};
-integerCif = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
-integerN = "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
-hexa = "0x", hexDigit ;
-hexDigit = "0" | otherHex;
-otherHex = hexaCif, {hexaN};
-hexaCif = integerCif |"A"|"B"|"C"|"D"|"E"|"F"|"a"|"b"|"c"|"d"|"e"|"f";
-hexaN = integerN |"A"|"B"|"C"|"D"|"E"|"F"|"a"|"b"|"c"|"d"|"e"|"f";
-binary = "b", binaryDigit, {binaryDigit};
-binaryDigit = "0" | "1";
+expression ::= term,expression2
+expression2 ::= "+",term,expression2 
+expression2 ::= ""
+term ::= term2,term3
+term2 ::= factor,operation
+term3 ::= "*", term, term3
+term3 ::= ""
+operation ::= "~",factor,operation
+operation ::= ""
 
-array = "[", arrayNumbers, "]";
-arrayNumbers = integerArray | binaryArray | hexaArray;
-integerArray = integer, {separator, integer};
-binaryArray = binary, {separator, binary};
-hexaArray = hexa, {separator, hexa};
-separator = "," | ", ";
+term2 ::= "*",factor,term2
+term2 ::= term3
+term2 ::= ""
+term3 ::= "~",factor,term3
+term3 ::= ""
+factor ::= "("expression")"
+factor ::= integer
+factor ::= binary
+factor ::= hexa
+factor ::= array
+factor ::= rand
 
-random = "rand(", [randArguments], ")";
-randType = "int" | "bin" | "hex";
+digits ::={"0","1","2","3","4","5","6","7","8","9"}
+integer ::= digits+
+binary ::= "b",("0"|"1")+
+hexa ::= "0x",hexdigits+
+hexdigits ::= {"0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","A","B","C","D","E","F"}
+array ::= "[",arrayNumbers,"]"
+arrayNumbers ::= integerArray
+arrayNumbers ::= binaryArray
+arrayNumbers ::= hexaArray
+integerArray ::= integer
+integerArray ::= integerArray,separator,integer
+binaryArray ::= binary
+binaryArray ::= binaryArray,separator,binary
+hexaArray ::= hexa
+hexaArray ::= hexaArray,separator,hexa
+separator = ","
 
-randArguments = [integer, separator, integer], [[separator], integer], [[separator], randType];
+rand ::= "rand(",rand_arguments,")"
+rand_arguments ::= ""
+rand_arguments ::= data_type
+rand_arguments ::= integer,separator,integer
+rand_arguments ::= integer,separator,integer,separator,data_type
+rand_arguments ::= integer
+rand_arguments ::= integer,separator,data_type
+rand_arguments ::= integer,separator,integer,separator,integer
+rand_arguments ::= integer,separator,integer,separator,integer,separator,data_type
 
-NEBO:
-randArguments = arg, [separator, arg], [separator, arg];
-arg = integer, separator, integer | integer | randType;
-
+data_type ::= "int"
+data_type ::= "bin"
+data_type ::= "hex"

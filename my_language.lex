@@ -56,52 +56,45 @@ void print_msg(char *msg);
         } 
 [0-9]+  {
         int_values=process_pattern(int_values,"Integer number detected.", PATT_INT);   
-        //yylval = atoi(yytext);              
+        yylval.int_value = atoi(yytext);              
         return INTEGER;
         }
 b[01]+  {
         bin_values=process_pattern(bin_values,"Binary number detected.", PATT_BIN);   
-        //yylval = atoi(yytext);              
+        yylval.str_value = strdup(yytext);            
         return BINARY;
         }
 "0x"[0-9a-fA-F]+ {
         hex_values=process_pattern(hex_values,"Hexadecimal number detected.", PATT_HEX);   
-        //yylval = atoi(yytext);              
+        yylval.str_value = strdup(yytext);        
         return HEXA;
         }
 \[      {
-        array_start=process_pattern(array_start,"Start of array detected.", PATT_ARRAY_START);   
-        //yylval = atoi(yytext);              
+        array_start=process_pattern(array_start,"Start of array detected.", PATT_ARRAY_START);                 
         return ARRAY_START;
         }
 \]      {
-        array_end=process_pattern(array_end,"End of array detected.", PATT_ARRAY_END);   
-        //yylval = atoi(yytext);              
+        array_end=process_pattern(array_end,"End of array detected.", PATT_ARRAY_END);                 
         return ARRAY_END;
         }
 rand\(  {
-        rand_function=process_pattern(rand_function,"Random function detected.", PATT_RAND);   
-        //yylval = atoi(yytext);              
+        rand_function=process_pattern(rand_function,"Random function detected.", PATT_RAND);                 
         return RAND;
         }
 ,       {
-        separator=process_pattern(separator,"Separator detected.", PATT_SEPARATOR);   
-        //yylval = atoi(yytext);              
+        separator=process_pattern(separator,"Separator detected.", PATT_SEPARATOR);                
         return SEPARATOR;
         }
 "int"   {
-        type_int=process_pattern(type_int,"Data type int detected.", PATT_TYPE_INT);   
-        //yylval = atoi(yytext);              
+        type_int=process_pattern(type_int,"Data type int detected.", PATT_TYPE_INT);              
         return INT_TYPE;
         }
 "bin"   {
-        type_bin=process_pattern(type_bin,"Data type bin detected.", PATT_TYPE_BIN);   
-        //yylval = atoi(yytext);              
+        type_bin=process_pattern(type_bin,"Data type bin detected.", PATT_TYPE_BIN);               
         return BIN_TYPE;
         }
 "hex"   {
-        type_hex=process_pattern(type_hex,"Data type hex detected.", PATT_TYPE_HEX);   
-        //yylval = atoi(yytext);              
+        type_hex=process_pattern(type_hex,"Data type hex detected.", PATT_TYPE_HEX);            
         return HEX_TYPE;
         }
 ^\n    {        
@@ -142,9 +135,9 @@ return 1;
 
 
 void print_msg(char *msg){
-    #ifdef VERBOSE
-        printf("%s",msg);
-    #endif
+        #ifdef VERBOSE
+                printf("%s",msg);
+        #endif
 }
 
 void print_error(int ERRNO){
@@ -161,7 +154,6 @@ int process_pattern(int number,char* Message, int Pattern) {
     }    
 
     print_msg(Message);
-    //printf("%s",Message);
     
     number++;
     return number;
