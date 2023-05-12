@@ -1,6 +1,6 @@
 # PRK - vlastní jazyk
 
-1. OPERACE - vlastní operace ~ -> daný dvě čísla vynásobí a přičte k výsledku hodnotu druhého čísla -> a~b = a*b + b
+1. OPERACE - vlastní operace ~ -> daný dvě čísla vynásobí a přičte k výsledku hodnoty obou čísel -> a~b = a*b + a + b
 - celkově tedy operace +, * a ~
 - pririty jsou řešeny následovně:
 	- nejvyšší prioritu má vlastní operace ~
@@ -10,7 +10,7 @@
 
 2. DATOVÉ TYPY - (integer), hexadecimální čísla (0x...), binární čísla (b10010) a array (v hranatých závorkách, čísla oddělené čárkou)
 - sčítání, násobení a ~ -> výsledkem bude vždy datový typ prvního čísla -> tzn. OxA + 21 = 0x1F
-- sčítání, násobení a ~ čísel a polí - vždy např. sečtu číslo s každým prvkem pole, výsledkem bude datový typ čísla z pole - tzn. datový typ čísel v poli se nezmění
+- sčítání, násobení a ~ čísel a polí - vždy např. sečtu číslo s každým prvkem pole, výsledkem bude datový typ čísla z pole - tzn. datový typ čísel v poli se nezmění - příklad: [0xF1,0xD4,0xCC] ~ 2 = [0x2D5, 0x27E, 0x266]
 - array nesmí být prázdné -> [] není platné
 
 3. NĚCO UNIKÁTNÍHO - Random číslo - do výpočtu můžu zadat funkci rand() s tím, že může mít argumenty:

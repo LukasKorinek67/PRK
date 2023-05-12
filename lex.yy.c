@@ -506,8 +506,10 @@ int errors_detected=0;
 int process_pattern(int number, char *Message, int Pattern);
 void print_error(int ERRNO);
 void print_msg(char *msg);
+int binary_to_int(char* binary);
+int hexa_to_int(char* hexa);
 
-#line 511 "lex.yy.c"
+#line 513 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -692,9 +694,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 35 "my_language.lex"
+#line 37 "my_language.lex"
 
-#line 698 "lex.yy.c"
+#line 700 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -781,12 +783,12 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 36 "my_language.lex"
+#line 38 "my_language.lex"
 {lines_comment=process_pattern(lines_comment,"Comment deleted.\n",PATT_NO);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 37 "my_language.lex"
+#line 39 "my_language.lex"
 {
         add_ops=process_pattern(add_ops,"Add operator detected.",PATT_PLUS);        
         return PLUS; 
@@ -794,7 +796,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 41 "my_language.lex"
+#line 43 "my_language.lex"
 {
         mpy_ops=process_pattern(mpy_ops,"Multiplication operator detected.",PATT_MPY);
         return MPY;
@@ -802,7 +804,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 45 "my_language.lex"
+#line 47 "my_language.lex"
 {
         til_ops=process_pattern(til_ops,"Tilde operator detected.",PATT_TIL);
         return TILDE;
@@ -810,7 +812,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 49 "my_language.lex"
+#line 51 "my_language.lex"
 {
         br_left=process_pattern(br_left,"Opening bracket detected.",PATT_L_BR);
         return L_BR;
@@ -818,7 +820,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 53 "my_language.lex"
+#line 55 "my_language.lex"
 {
         br_right=process_pattern(br_right,"Closing bracket detected.", PATT_R_BR);
         return R_BR;
@@ -826,34 +828,34 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 57 "my_language.lex"
+#line 59 "my_language.lex"
 {
         int_values=process_pattern(int_values,"Integer number detected.", PATT_INT);   
-        yylval.int_value = atoi(yytext);              
+        yylval.integer = atoi(yytext);              
         return INTEGER;
         }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 62 "my_language.lex"
+#line 64 "my_language.lex"
 {
         bin_values=process_pattern(bin_values,"Binary number detected.", PATT_BIN);   
-        yylval.str_value = strdup(yytext);            
+        yylval.integer = binary_to_int(yytext);         
         return BINARY;
         }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 67 "my_language.lex"
+#line 69 "my_language.lex"
 {
         hex_values=process_pattern(hex_values,"Hexadecimal number detected.", PATT_HEX);   
-        yylval.str_value = strdup(yytext);        
+        yylval.integer = hexa_to_int(yytext);    
         return HEXA;
         }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 72 "my_language.lex"
+#line 74 "my_language.lex"
 {
         array_start=process_pattern(array_start,"Start of array detected.", PATT_ARRAY_START);                 
         return ARRAY_START;
@@ -861,7 +863,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 76 "my_language.lex"
+#line 78 "my_language.lex"
 {
         array_end=process_pattern(array_end,"End of array detected.", PATT_ARRAY_END);                 
         return ARRAY_END;
@@ -869,7 +871,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 80 "my_language.lex"
+#line 82 "my_language.lex"
 {
         rand_function=process_pattern(rand_function,"Random function detected.", PATT_RAND);                 
         return RAND;
@@ -877,7 +879,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 84 "my_language.lex"
+#line 86 "my_language.lex"
 {
         separator=process_pattern(separator,"Separator detected.", PATT_SEPARATOR);                
         return SEPARATOR;
@@ -885,7 +887,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 88 "my_language.lex"
+#line 90 "my_language.lex"
 {
         type_int=process_pattern(type_int,"Data type int detected.", PATT_TYPE_INT);              
         return INT_TYPE;
@@ -893,7 +895,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 92 "my_language.lex"
+#line 94 "my_language.lex"
 {
         type_bin=process_pattern(type_bin,"Data type bin detected.", PATT_TYPE_BIN);               
         return BIN_TYPE;
@@ -901,7 +903,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 96 "my_language.lex"
+#line 98 "my_language.lex"
 {
         type_hex=process_pattern(type_hex,"Data type hex detected.", PATT_TYPE_HEX);            
         return HEX_TYPE;
@@ -910,39 +912,40 @@ YY_RULE_SETUP
 case 17:
 /* rule 17 can match eol */
 YY_RULE_SETUP
-#line 100 "my_language.lex"
+#line 102 "my_language.lex"
 {        
         void_lines_done++;        
         //print_msg("Void line detected.\n");
-        printf("Void line detected.\n");}   
+        //printf("Void line detected.\n");
+        }   
 	YY_BREAK
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 105 "my_language.lex"
+#line 108 "my_language.lex"
 {
         lines_done++;
         //print_msg("Line detected.\n");
-        printf("Line detected.\n");
+        //printf("Line detected.\n");
         return LINE_END;
         }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 112 "my_language.lex"
+#line 115 "my_language.lex"
 ; /*Skip whitespace*/
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 114 "my_language.lex"
+#line 117 "my_language.lex"
 {errors_detected=process_pattern(errors_detected,"An error detected.\n",PATT_ERR);} /* What is not from alphabet: lexer error  */
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 115 "my_language.lex"
+#line 118 "my_language.lex"
 ECHO;
 	YY_BREAK
-#line 946 "lex.yy.c"
+#line 949 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1942,7 +1945,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 115 "my_language.lex"
+#line 118 "my_language.lex"
 
 
 
@@ -1990,4 +1993,38 @@ int process_pattern(int number,char* Message, int Pattern) {
     number++;
     return number;
 }
+
+int binary_to_int(char* binary) {
+    int len = strlen(binary);
+    int result = 0;
+    for (int i = 1; i < len; i++) { // začátek na indexu 1, protože ignoruju první znak 'b'
+        if (binary[i] == '1') {
+            result += 1 << (len - i - 1);
+        }
+    }
+    return result;
+}
+
+int hexa_to_int(char* hexa) {
+    int len = strlen(hexa);
+    int base = 1;
+    int decimal = 0;
+    for (int i = len - 1; i >= 2; i--) {
+        if (hexa[i] >= '0' && hexa[i] <= '9') {
+            decimal += (hexa[i] - 48) * base;
+            base *= 16;
+        }
+        else if (hexa[i] >= 'A' && hexa[i] <= 'F') {
+            decimal += (hexa[i] - 55) * base;
+            base *= 16;
+        }
+        else if (hexa[i] >= 'a' && hexa[i] <= 'f') {
+            decimal += (hexa[i] - 87) * base;
+            base *= 16;
+        }
+    }
+    return decimal;
+}
+
+
 

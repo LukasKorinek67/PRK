@@ -1,692 +1,315 @@
-Void line detected.
-Rule13 - INTEGER (67)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule2 -----
-Rule13 - INTEGER (12)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule15 - HEXA (0x99)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule15 - HEXA (0x12CF)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b010001)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b10000000)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule22
-Rule23
-Rule23
-Rule23
-Rule23
-Rule19 - int array
-Rule18
-Rule16
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule26
-Rule27
-Rule27
-Rule27
-Rule21 - hexarray
-Rule18
-Rule16
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule24
-Rule25
-Rule25
-Rule25
-Rule25
-Rule25
-Rule20 - bin array
-Rule18
-Rule16
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule13 - INTEGER (0)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (23)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b10010110)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule15 - HEXA (0xACC)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule13 - INTEGER (35)
-Rule11
-Rule7
-Rule13 - INTEGER (3)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b10010110)
-Rule11
-Rule7
-Rule15 - HEXA (0xACC)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (9)
-Rule11
-Rule7
-Rule14 - BINARY (b1001)
-Rule11
-Rule7
-Rule15 - HEXA (0xC44B)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule13 - INTEGER (2)
-Rule13 - INTEGER (34)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (4444)
-Rule13 - INTEGER (88)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b0100110)
-Rule14 - BINARY (b111111)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule15 - HEXA (0xAA)
-Rule15 - HEXA (0xBB)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (2)
-Rule15 - HEXA (0xAC)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule22
-Rule23
-Rule19 - int array
-Rule18
-Rule16
-Rule11
-Rule7
-Rule13 - INTEGER (3)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule24
-Rule25
-Rule25
-Rule20 - bin array
-Rule18
-Rule16
-Rule11
-Rule7
-Rule9
-Rule6
-Rule15 - HEXA (0xADDD)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule14 - BINARY (b1001)
-Rule26
-Rule27
-Rule27
-Rule27
-Rule21 - hexarray
-Rule18
-Rule16
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule22
-Rule23
-Rule23
-Rule23
-Rule19 - int array
-Rule18
-Rule16
-Rule11
-Rule7
-Rule24
-Rule25
-Rule25
-Rule25
-Rule20 - bin array
-Rule18
-Rule16
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (4)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Rule11
-Rule7
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (7)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (3)
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (5)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
-Rule12 - závorky
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule36 - rand()
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule38 - rand type bin
-Rule29 - rand(type)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule30 - rand(x,y)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule39 - rand type hex
-Rule31 - rand(x,y,type)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule32 - rand(n)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule39 - rand type hex
-Rule33 - rand(n,type)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule34 - rand(x,y,n)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Rule37 - rand type int
-Rule35 - rand(x,y,n,type)
-Rule28
-Rule17 - random
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule3
------ Syntax OK, Rule1 -----
-Void line detected.
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule13 - INTEGER (9)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule13 - INTEGER (2)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (3)
-Rule13 - INTEGER (9)
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (2)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (4)
-Rule11
-Rule7
-Rule13 - INTEGER (8)
-Rule13 - INTEGER (9)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule15 - HEXA (0x3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule15 - HEXA (0x1)
-Rule11
-Rule7
-Rule15 - HEXA (0x3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule15 - HEXA (0xA)
-Rule11
-Rule7
-Rule15 - HEXA (0xB)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (1)
-Rule13 - INTEGER (3)
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule13 - INTEGER (2)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule13 - INTEGER (2)
-Rule13 - INTEGER (2)
-Rule11
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule13 - INTEGER (2)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (3)
-Rule13 - INTEGER (2)
-Rule13 - INTEGER (2)
-Line detected.
-Rule11
-Rule10 - operator ~ 
-Rule10 - operator ~ 
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule13 - INTEGER (9)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
------ Syntax OK, Rule1 -----
+INTEGER (67)
+
+RESULT: 67
+---------------- OK ----------------
+INTEGER (12)
+
+RESULT: 12
+---------------- OK ----------------
+HEXA (0x99) -> int hodnota 153
+
+RESULT: 0x99 (hodnota 153)
+---------------- OK ----------------
+HEXA (0x12CF) -> int hodnota 4815
+
+RESULT: 0x12CF (hodnota 4815)
+---------------- OK ----------------
+BINARY (b10001) -> int hodnota 17
+
+RESULT: b10001 (hodnota 17)
+---------------- OK ----------------
+BINARY (b10000000) -> int hodnota 128
+
+RESULT: b10000000 (hodnota 128)
+---------------- OK ----------------
+INT array [1, 2, 4, 7, 12]
+
+RESULT: [1, 2, 4, 7, 12]
+---------------- OK ----------------
+HEX array [0xAB, 0x88, 0xFF1, 0x1F] -> int hodnoty [171, 136, 4081, 31]
+
+RESULT: [0xAB, 0x88, 0xFF1, 0x1F] - int hodnoty: [171, 136, 4081, 31]
+---------------- OK ----------------
+BIN array [b10, b1, b10101, b1000001, b10, b101] -> int hodnoty [2, 1, 21, 65, 2, 5]
+
+RESULT: [b10, b1, b10101, b1000001, b10, b101] - int hodnoty: [2, 1, 21, 65, 2, 5]
+---------------- OK ----------------
+INTEGER (0)
+INTEGER (23)
+Operator +
+
+RESULT: 23
+---------------- OK ----------------
+BINARY (b10010110) -> int hodnota 150
+HEXA (0xACC) -> int hodnota 2764
+Operator +
+
+RESULT: b101101100010 (hodnota 2914)
+---------------- OK ----------------
+HEXA (0xAA3) -> int hodnota 2723
+HEXA (0xBF1) -> int hodnota 3057
+HEXA (0xFF) -> int hodnota 255
+Operator +
+Operator +
+
+RESULT: 0x1793 (hodnota 6035)
+---------------- OK ----------------
+INTEGER (35)
+INTEGER (3)
+Operator * 
+
+RESULT: 105
+---------------- OK ----------------
+BINARY (b10010110) -> int hodnota 150
+HEXA (0xACC) -> int hodnota 2764
+Operator * 
+
+RESULT: b1100101001110001000 (hodnota 414600)
+---------------- OK ----------------
+INTEGER (9)
+BINARY (b1001) -> int hodnota 9
+HEXA (0xC44B) -> int hodnota 50251
+Operator * 
+Operator * 
+
+RESULT: 4070331
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (34)
+Operator ~ 
+
+RESULT: 104
+---------------- OK ----------------
+INTEGER (4444)
+INTEGER (88)
+Operator ~ 
+
+RESULT: 395604
+---------------- OK ----------------
+BINARY (b100110) -> int hodnota 38
+BINARY (b111111) -> int hodnota 63
+Operator ~ 
+
+RESULT: b100110111111 (hodnota 2495)
+---------------- OK ----------------
+HEXA (0xAA) -> int hodnota 170
+HEXA (0xBB) -> int hodnota 187
+Operator ~ 
+
+RESULT: 0x7D93 (hodnota 32147)
+---------------- OK ----------------
+INTEGER (2)
+HEXA (0xAC) -> int hodnota 172
+Operator ~ 
+
+RESULT: 518
+---------------- OK ----------------
+INTEGER (6)
+INTEGER (3)
+INTEGER (4)
+Operator ~ 
+Operator ~ 
+
+RESULT: 139
+---------------- OK ----------------
+INT array [1, 2]
+INTEGER (3)
+Operator * 
+
+RESULT: [3, 6]
+---------------- OK ----------------
+BIN array [b100111, b1001101, b1] -> int hodnoty [39, 77, 1]
+HEXA (0xADDD) -> int hodnota 44509
+Operator +
+
+RESULT: [b1010111000000100, b1010111000101010, b1010110111011110] - int hodnoty: [44548, 44586, 44510]
+---------------- OK ----------------
+BINARY (b1001) -> int hodnota 9
+HEX array [0xAA, 0x22A, 0x33, 0x87A] -> int hodnoty [170, 554, 51, 2170]
+Operator ~ 
+
+RESULT: [0x6AD, 0x15AD, 0x207, 0x54CD] - int hodnoty: [1709, 5549, 519, 21709]
+---------------- OK ----------------
+HEX array [0xF1, 0xD4, 0xCC] -> int hodnoty [241, 212, 204]
+INTEGER (2)
+Operator ~ 
+
+RESULT: [0x2D5, 0x27E, 0x266] - int hodnoty: [725, 638, 614]
+---------------- OK ----------------
+INT array [2, 3, 33, 88]
+BIN array [b1010, b11, b1011001, b101] -> int hodnoty [10, 3, 89, 5]
+Operator * 
+
+RESULT: [20, 9, 2937, 440]
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (4)
+Operator +
+Závorky
+INTEGER (3)
+INTEGER (7)
+Operator +
+Závorky
+Operator * 
+
+RESULT: 60
+---------------- OK ----------------
+INTEGER (3)
+INTEGER (3)
+INTEGER (2)
+INTEGER (5)
+Operator +
+Závorky
+Operator * 
+Závorky
+Operator ~ 
+
+RESULT: 87
+---------------- OK ----------------
+rand() -> number 25
+
+RESULT: 25
+---------------- OK ----------------
+rand(type)
+rand(bin) -> number b11001
+
+RESULT: b11001 (hodnota 25)
+---------------- OK ----------------
+rand(x,y)
+rand(3,8) -> number 3
+
+RESULT: 3
+---------------- OK ----------------
+rand(x,y,type)
+rand(1,200,hex) -> number 0xB3
+
+RESULT: 0xB3 (hodnota 179)
+---------------- OK ----------------
+rand(n)
+rand(7) -> array [25, 29, 87, 80, 89, 1, 19]
+
+RESULT: [25, 29, 87, 80, 89, 1, 19]
+---------------- OK ----------------
+rand(n,type)
+rand(12,hex) -> array [0x19, 0x1D, 0x57, 0x50, 0x59, 0x1, 0x13, 0x20, 0x4D, 0x3, 0x51, 0x26]
+
+RESULT: [0x19, 0x1D, 0x57, 0x50, 0x59, 0x1, 0x13, 0x20, 0x4D, 0x3, 0x51, 0x26] - int hodnoty: [25, 29, 87, 80, 89, 1, 19, 32, 77, 3, 81, 38]
+---------------- OK ----------------
+rand(x,y,n)
+rand(20,120,5) -> array [45, 49, 107, 100, 109]
+
+RESULT: [45, 49, 107, 100, 109]
+---------------- OK ----------------
+rand(x,y,n,type)
+rand(100,1000,40,int) -> array [741, 406, 758, 228, 445, 536, 985, 796, 835, 643, 847, 141, 207, 866, 548, 455, 627, 886, 200, 384, 246, 635, 165, 209, 570, 156, 859, 652, 574, 941, 476, 390, 898, 636, 541, 395, 442, 597, 188, 789]
+
+RESULT: [741, 406, 758, 228, 445, 536, 985, 796, 835, 643, 847, 141, 207, 866, 548, 455, 627, 886, 200, 384, 246, 635, 165, 209, 570, 156, 859, 652, 574, 941, 476, 390, 898, 636, 541, 395, 442, 597, 188, 789]
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (3)
+INTEGER (9)
+Operator * 
+INTEGER (2)
+Operator +
+Operator +
+
+RESULT: 31
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (3)
+INTEGER (9)
+Operator ~ 
+INTEGER (2)
+Operator +
+Operator +
+
+RESULT: 43
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (4)
+INTEGER (8)
+INTEGER (9)
+Operator ~ 
+Operator * 
+Operator +
+
+RESULT: 358
+---------------- OK ----------------
+HEXA (0x3) -> int hodnota 3
+HEXA (0x1) -> int hodnota 1
+HEXA (0x3) -> int hodnota 3
+Operator * 
+HEXA (0xA) -> int hodnota 10
+HEXA (0xB) -> int hodnota 11
+Operator * 
+Operator +
+Operator +
+
+RESULT: 0x74 (hodnota 116)
+---------------- OK ----------------
+INTEGER (3)
+INTEGER (1)
+INTEGER (3)
+Operator ~ 
+INTEGER (2)
+Operator * 
+Operator +
+
+RESULT: 17
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (2)
+INTEGER (2)
+Operator ~ 
+Operator * 
+INTEGER (2)
+Operator +
+
+RESULT: 18
+---------------- OK ----------------
+INTEGER (3)
+INTEGER (3)
+INTEGER (2)
+INTEGER (2)
+Operator ~ 
+Operator ~ 
+Operator +
+
+RESULT: 38
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (3)
+INTEGER (9)
+Operator * 
+Operator +
+
+RESULT: 29
+---------------- OK ----------------
+INTEGER (1)
+INTEGER (2)
+INTEGER (3)
+INTEGER (4)
+Operator * 
+INTEGER (5)
+INTEGER (6)
+INTEGER (7)
+Operator * 
+Operator * 
+Operator +
+Operator +
+Operator +
+
+RESULT: 225
+---------------- OK ----------------
+INTEGER (2)
+INTEGER (3)
+INTEGER (4)
+Operator ~ 
+Operator ~ 
+INTEGER (1)
+INTEGER (5)
+Operator ~ 
+Operator +
+
+RESULT: 70
+---------------- OK ----------------

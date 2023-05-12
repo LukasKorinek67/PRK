@@ -29,6 +29,8 @@ int errors_detected=0;
 int process_pattern(int number, char *Message, int Pattern);
 void print_error(int ERRNO);
 void print_msg(char *msg);
+int binary_to_int(char* binary);
+int hexa_to_int(char* hexa);
 
 %}
 
@@ -56,17 +58,17 @@ void print_msg(char *msg);
         } 
 [0-9]+  {
         int_values=process_pattern(int_values,"Integer number detected.", PATT_INT);   
-        yylval.int_value = atoi(yytext);              
+        yylval.integer = atoi(yytext);              
         return INTEGER;
         }
 b[01]+  {
         bin_values=process_pattern(bin_values,"Binary number detected.", PATT_BIN);   
-        yylval.str_value = strdup(yytext);            
+        yylval.integer = binary_to_int(yytext);         
         return BINARY;
         }
 "0x"[0-9a-fA-F]+ {
         hex_values=process_pattern(hex_values,"Hexadecimal number detected.", PATT_HEX);   
-        yylval.str_value = strdup(yytext);        
+        yylval.integer = hexa_to_int(yytext);    
         return HEXA;
         }
 \[      {
@@ -100,12 +102,13 @@ rand\(  {
 ^\n    {        
         void_lines_done++;        
         //print_msg("Void line detected.\n");
-        printf("Void line detected.\n");}   
+        //printf("Void line detected.\n");
+        }   
 
 \n     {
         lines_done++;
         //print_msg("Line detected.\n");
-        printf("Line detected.\n");
+        //printf("Line detected.\n");
         return LINE_END;
         }
 
@@ -158,3 +161,37 @@ int process_pattern(int number,char* Message, int Pattern) {
     number++;
     return number;
 }
+
+int binary_to_int(char* binary) {
+    int len = strlen(binary);
+    int result = 0;
+    for (int i = 1; i < len; i++) { // začátek na indexu 1, protože ignoruju první znak 'b'
+        if (binary[i] == '1') {
+            result += 1 << (len - i - 1);
+        }
+    }
+    return result;
+}
+
+int hexa_to_int(char* hexa) {
+    int len = strlen(hexa);
+    int base = 1;
+    int decimal = 0;
+    for (int i = len - 1; i >= 2; i--) {
+        if (hexa[i] >= '0' && hexa[i] <= '9') {
+            decimal += (hexa[i] - 48) * base;
+            base *= 16;
+        }
+        else if (hexa[i] >= 'A' && hexa[i] <= 'F') {
+            decimal += (hexa[i] - 55) * base;
+            base *= 16;
+        }
+        else if (hexa[i] >= 'a' && hexa[i] <= 'f') {
+            decimal += (hexa[i] - 87) * base;
+            base *= 16;
+        }
+    }
+    return decimal;
+}
+
+

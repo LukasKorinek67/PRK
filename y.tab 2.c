@@ -168,37 +168,12 @@ data_type ::= "hex"
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 int yylex();
 void yyerror(const char *s);
 extern int yylineno;
-
-char* intToBinary(int n);
-char* intToHexa(int n);
-struct Number plusOperation(struct Number firstNumber, struct Number secondNumber);
-struct Number multiplyOperation(struct Number firstNumber, struct Number secondNumber);
-struct Number tildeOperation(struct Number firstNumber, struct Number secondNumber);
-int* sumTwoArrays(int *firstArray, int *secondArray, int size);
-int* sumNumWithArray(int number, int *array, int size);
-int* multiplyTwoArrays(int *firstArray, int *secondArray, int size);
-int* multiplyNumWithArray(int number, int *array, int size);
-int* tildeTwoArrays(int *firstArray, int *secondArray, int size);
-int* tildeNumWithArray(int number, int *array, int size);
-char* getNumberType(char* firstType, char* secondType);
-int generateRandomNumber();
-int generateRandomNumberWithBounds(int min, int max);
-int* generateRandomArray(int n);
-int* generateRandomArrayWithBounds(int n, int min, int max);
-int* addNumberToArray(int number, int *arrayNumbers, int arraySize);
-void printResult(struct Number number);
-void printNumber(int value, char* numberType);
-void printArray(int *arrayNumbers, int arraySize, char* numberType);
-void printArrayInt(int *arrayNumbers, int arraySize);
-void printArrayBin(int *arrayNumbers, int arraySize);
-void printArrayHexa(int *arrayNumbers, int arraySize);
+char *int_to_binary(int n);
 
 
 
@@ -221,21 +196,7 @@ void printArrayHexa(int *arrayNumbers, int arraySize);
 #endif
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE
-#line 96 "my_language.y"
-{
-  struct Number {
-    char* type;
-    int value;
-    int isArray;
-    int arraySize;
-    int *arrayNumbers;
-  } number;
-  int integer;
-}
-/* Line 193 of yacc.c.  */
-#line 238 "y.tab.c"
-	YYSTYPE;
+typedef int YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 # define YYSTYPE_IS_TRIVIAL 1
@@ -247,7 +208,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 251 "y.tab.c"
+#line 212 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -543,13 +504,13 @@ static const yytype_int8 yyrhs[] =
 };
 
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
-static const yytype_uint16 yyrline[] =
+static const yytype_uint8 yyrline[] =
 {
-       0,   129,   129,   133,   140,   146,   150,   159,   165,   171,
-     175,   184,   188,   197,   201,   208,   215,   222,   225,   231,
-     237,   243,   251,   262,   280,   291,   309,   320,   338,   349,
-     355,   365,   373,   383,   394,   405,   416,   427,   437,   440,
-     443
+       0,    99,    99,   100,   107,   111,   112,   116,   120,   124,
+     125,   129,   130,   134,   135,   144,   152,   156,   157,   161,
+     165,   166,   167,   171,   175,   182,   189,   200,   204,   211,
+     215,   216,   217,   218,   219,   220,   221,   222,   226,   227,
+     228
 };
 #endif
 
@@ -1489,436 +1450,246 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 129 "my_language.y"
-    {
-        printResult((yyvsp[(2) - (3)].number));
-        printf("---------------- OK ----------------\n");
-    }
+#line 99 "my_language.y"
+    { printf("----- Syntax OK, Rule1 -----\n"); }
     break;
 
   case 3:
-#line 133 "my_language.y"
+#line 100 "my_language.y"
     {
-        printResult((yyvsp[(1) - (2)].number));
-        printf("---------------- OK ----------------\n");
-    }
+        printf("----- Syntax OK, Rule2 -----\n");
+        //printf("Result: %f\n", $1);
+        }
     break;
 
   case 4:
-#line 140 "my_language.y"
-    {
-        (yyval.number) = plusOperation((yyvsp[(1) - (2)].number), (yyvsp[(2) - (2)].number));
-    }
+#line 107 "my_language.y"
+    {printf("Rule3\n");}
     break;
 
   case 5:
-#line 146 "my_language.y"
-    {
-        printf("Operator +\n");
-        (yyval.number) = plusOperation((yyvsp[(2) - (3)].number), (yyvsp[(3) - (3)].number));
-    }
+#line 111 "my_language.y"
+    {printf("Rule4 - operator +\n");}
     break;
 
   case 6:
-#line 150 "my_language.y"
-    {
-        (yyval.number).type = "none";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+#line 112 "my_language.y"
+    {printf("Rule5\n");}
     break;
 
   case 7:
-#line 159 "my_language.y"
-    {
-        (yyval.number) = multiplyOperation((yyvsp[(1) - (2)].number), (yyvsp[(2) - (2)].number));
-    }
+#line 116 "my_language.y"
+    {printf("Rule6\n");}
     break;
 
   case 8:
-#line 165 "my_language.y"
-    {
-        (yyval.number) = tildeOperation((yyvsp[(1) - (2)].number), (yyvsp[(2) - (2)].number));
-    }
+#line 120 "my_language.y"
+    {printf("Rule7\n"); /*printf("- $1 je: %d\n", $1);*/}
     break;
 
   case 9:
-#line 171 "my_language.y"
-    {
-        printf("Operator * \n");
-        (yyval.number) = multiplyOperation((yyvsp[(2) - (3)].number), (yyvsp[(3) - (3)].number));
-    }
+#line 124 "my_language.y"
+    {printf("Rule8 - operator * \n");}
     break;
 
   case 10:
-#line 175 "my_language.y"
-    {
-        (yyval.number).type = "none";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+#line 125 "my_language.y"
+    {printf("Rule9\n");}
     break;
 
   case 11:
-#line 184 "my_language.y"
-    {
-        printf("Operator ~ \n");
-        (yyval.number) = tildeOperation((yyvsp[(2) - (3)].number), (yyvsp[(3) - (3)].number));
-    }
+#line 129 "my_language.y"
+    {printf("Rule10 - operator ~ \n");}
     break;
 
   case 12:
-#line 188 "my_language.y"
-    {
-        (yyval.number).type = "none";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+#line 130 "my_language.y"
+    {printf("Rule11\n");}
     break;
 
   case 13:
-#line 197 "my_language.y"
-    {
-        printf("Závorky\n");
-        (yyval.number) = (yyvsp[(2) - (3)].number);
-    }
+#line 134 "my_language.y"
+    {printf("Rule12 - závorky\n");}
     break;
 
   case 14:
-#line 201 "my_language.y"
-    {
-        printf("INTEGER (%d)\n", (yyvsp[(1) - (1)].integer));
-        (yyval.number).type = "int";
-        (yyval.number).value = (yyvsp[(1) - (1)].integer);
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+#line 135 "my_language.y"
+    { 
+        //printf("Rule13 - INTEGER (%d)\n", yylval.int_value);
+        //printf("Rule13 - INTEGER (%d)\n", yylval.int_value);
+        printf("Rule13 - INTEGER\n");
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
+        (yyval)=(yyvsp[(1) - (1)]);
+        }
     break;
 
   case 15:
-#line 208 "my_language.y"
+#line 144 "my_language.y"
     {
-        printf("BINARY (%s) -> int hodnota %d\n", intToBinary((yyvsp[(1) - (1)].integer)), (yyvsp[(1) - (1)].integer));
-        (yyval.number).type = "bin";
-        (yyval.number).value = (yyvsp[(1) - (1)].integer);
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+        char *binary = int_to_binary((yyvsp[(1) - (1)]));
+        printf("Rule14 - BINARY\n");
+        printf("Binary číslo: %s\n", binary);
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
+        free(binary);
+        }
     break;
 
   case 16:
-#line 215 "my_language.y"
+#line 152 "my_language.y"
     {
-        printf("HEXA (%s) -> int hodnota %d\n", intToHexa((yyvsp[(1) - (1)].integer)), (yyvsp[(1) - (1)].integer));
-        (yyval.number).type = "hex";
-        (yyval.number).value = (yyvsp[(1) - (1)].integer);
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-    }
+        printf("Rule15 - HEXA\n");
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
+        }
     break;
 
   case 17:
-#line 222 "my_language.y"
-    {
-        (yyval.number)=(yyvsp[(1) - (1)].number);
-    }
+#line 156 "my_language.y"
+    {printf("Rule16\n");}
     break;
 
   case 18:
-#line 225 "my_language.y"
-    {
-        (yyval.number)=(yyvsp[(1) - (1)].number);
-    }
+#line 157 "my_language.y"
+    {printf("Rule17 - random\n");}
     break;
 
   case 19:
-#line 231 "my_language.y"
-    {
-        (yyval.number) = (yyvsp[(2) - (3)].number);
-    }
+#line 161 "my_language.y"
+    {printf("Rule18\n");}
     break;
 
   case 20:
-#line 237 "my_language.y"
-    {
-        printf("INT array ");
-        printArrayInt((yyvsp[(1) - (1)].number).arrayNumbers, (yyvsp[(1) - (1)].number).arraySize);
-        printf("\n");
-        (yyval.number) = (yyvsp[(1) - (1)].number);
-    }
+#line 165 "my_language.y"
+    {printf("Rule19 - int array\n");}
     break;
 
   case 21:
-#line 243 "my_language.y"
-    {
-        printf("BIN array ");
-        printArrayBin((yyvsp[(1) - (1)].number).arrayNumbers, (yyvsp[(1) - (1)].number).arraySize);
-        printf(" -> int hodnoty ");
-        printArrayInt((yyvsp[(1) - (1)].number).arrayNumbers, (yyvsp[(1) - (1)].number).arraySize);
-        printf("\n");
-        (yyval.number) = (yyvsp[(1) - (1)].number);
-    }
+#line 166 "my_language.y"
+    {printf("Rule20 - bin array\n");}
     break;
 
   case 22:
-#line 251 "my_language.y"
-    {
-        printf("HEX array ");
-        printArrayHexa((yyvsp[(1) - (1)].number).arrayNumbers, (yyvsp[(1) - (1)].number).arraySize);
-        printf(" -> int hodnoty ");
-        printArrayInt((yyvsp[(1) - (1)].number).arrayNumbers, (yyvsp[(1) - (1)].number).arraySize);
-        printf("\n");
-        (yyval.number) = (yyvsp[(1) - (1)].number);
-    }
+#line 167 "my_language.y"
+    {printf("Rule21 - hexarray\n");}
     break;
 
   case 23:
-#line 262 "my_language.y"
+#line 171 "my_language.y"
     {
-        if (((yyval.number).isArray == 0) && ((yyval.number).arraySize == 0)) {
-            (yyval.number).type = "int";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            (yyval.number).arraySize = 1;
-            int* array = malloc(1 * sizeof(int));
-            array[0] = (yyvsp[(1) - (1)].integer);
-            (yyval.number).arrayNumbers = array;
-        } else {
-            (yyval.number).type = "int";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            int lastSize = (yyval.number).arraySize;
-            (yyval.number).arraySize = lastSize + 1;
-            (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(1) - (1)].integer), (yyval.number).arrayNumbers, lastSize);
+        printf("Rule22\n");
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
         }
-    }
     break;
 
   case 24:
-#line 280 "my_language.y"
+#line 175 "my_language.y"
     {
-        (yyval.number).type = "int";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        int lastSize = (yyval.number).arraySize;
-        (yyval.number).arraySize = lastSize + 1;
-        (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(3) - (3)].integer), (yyval.number).arrayNumbers, lastSize);
-    }
+        printf("Rule23 - INTEGER\n");
+        printf("- $3 je: %d\n", (yyvsp[(3) - (3)]));
+        }
     break;
 
   case 25:
-#line 291 "my_language.y"
+#line 182 "my_language.y"
     {
-        if (((yyval.number).isArray == 0) && ((yyval.number).arraySize == 0)) {
-            (yyval.number).type = "bin";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            (yyval.number).arraySize = 1;
-            int* array = malloc(1 * sizeof(int));
-            array[0] = (yyvsp[(1) - (1)].integer);
-            (yyval.number).arrayNumbers = array;
-        } else {
-            (yyval.number).type = "bin";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            int lastSize = (yyval.number).arraySize;
-            (yyval.number).arraySize = lastSize + 1;
-            (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(1) - (1)].integer), (yyval.number).arrayNumbers, lastSize);
+        printf("Rule24 - BINARY\n");
+        char *binary = int_to_binary((yyvsp[(1) - (1)]));
+        printf("Binary číslo: %s\n", binary);
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
+        free(binary);
         }
-    }
     break;
 
   case 26:
-#line 309 "my_language.y"
+#line 189 "my_language.y"
     {
-        (yyval.number).type = "bin";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        int lastSize = (yyval.number).arraySize;
-        (yyval.number).arraySize = lastSize + 1;
-        (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(3) - (3)].integer), (yyval.number).arrayNumbers, lastSize);
-    }
+        printf("Rule25 - BINARY\n");
+        char *binary = int_to_binary((yyvsp[(3) - (3)]));
+        printf("Binary číslo: %s\n", binary);
+        printf("- $3 je: %d\n", (yyvsp[(3) - (3)]));
+        free(binary);
+
+        }
     break;
 
   case 27:
-#line 320 "my_language.y"
+#line 200 "my_language.y"
     {
-        if (((yyval.number).isArray == 0) && ((yyval.number).arraySize == 0)) {
-            (yyval.number).type = "hex";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            (yyval.number).arraySize = 1;
-            int* array = malloc(1 * sizeof(int));
-            array[0] = (yyvsp[(1) - (1)].integer);
-            (yyval.number).arrayNumbers = array;
-        } else {
-            (yyval.number).type = "hex";
-            (yyval.number).value = 0;
-            (yyval.number).isArray = 1;
-            int lastSize = (yyval.number).arraySize;
-            (yyval.number).arraySize = lastSize + 1;
-            (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(1) - (1)].integer), (yyval.number).arrayNumbers, lastSize);
+        printf("Rule26 - HEXA\n");
+        printf("- $1 je: %d\n", (yyvsp[(1) - (1)]));
         }
-    }
     break;
 
   case 28:
-#line 338 "my_language.y"
+#line 204 "my_language.y"
     {
-        (yyval.number).type = "hex";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        int lastSize = (yyval.number).arraySize;
-        (yyval.number).arraySize = lastSize + 1;
-        (yyval.number).arrayNumbers = addNumberToArray((yyvsp[(3) - (3)].integer), (yyval.number).arrayNumbers, lastSize);
-    }
+        printf("Rule27 - HEXA\n");
+        printf("- $3 je: %d\n", (yyvsp[(3) - (3)]));
+        }
     break;
 
   case 29:
-#line 349 "my_language.y"
-    {
-        (yyval.number) = (yyvsp[(2) - (3)].number);
-    }
+#line 211 "my_language.y"
+    {printf("Rule28\n");}
     break;
 
   case 30:
-#line 355 "my_language.y"
-    {
-        (yyval.number).type = (yyvsp[(1) - (1)].number).type;
-        (yyval.number).value = generateRandomNumber();
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-        printf("rand(type)\n");
-        printf("rand(%s) -> number ", (yyvsp[(1) - (1)].number).type);
-        printNumber((yyval.number).value, (yyval.number).type);
-        printf("\n");
-    }
+#line 215 "my_language.y"
+    {printf("Rule29 - rand(type)\n");}
     break;
 
   case 31:
-#line 365 "my_language.y"
-    {
-        (yyval.number).type = "int";
-        (yyval.number).value = generateRandomNumberWithBounds((yyvsp[(1) - (3)].integer), (yyvsp[(3) - (3)].integer));
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-        printf("rand(x,y)\n");
-        printf("rand(%d,%d) -> number %d\n", (yyvsp[(1) - (3)].integer), (yyvsp[(3) - (3)].integer), (yyval.number).value);
-    }
+#line 216 "my_language.y"
+    {printf("Rule30 - rand(x,y)\n");}
     break;
 
   case 32:
-#line 373 "my_language.y"
-    {
-        (yyval.number).type = (yyvsp[(5) - (5)].number).type;
-        (yyval.number).value = generateRandomNumberWithBounds((yyvsp[(1) - (5)].integer), (yyvsp[(3) - (5)].integer));
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-        printf("rand(x,y,type)\n");
-        printf("rand(%d,%d,%s) -> number ", (yyvsp[(1) - (5)].integer), (yyvsp[(3) - (5)].integer), (yyvsp[(5) - (5)].number).type);
-        printNumber((yyval.number).value, (yyval.number).type);
-        printf("\n");
-    }
+#line 217 "my_language.y"
+    {printf("Rule31 - rand(x,y,type)\n");}
     break;
 
   case 33:
-#line 383 "my_language.y"
-    {
-        (yyval.number).type = "int";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        (yyval.number).arraySize = (yyvsp[(1) - (1)].integer);
-        (yyval.number).arrayNumbers = generateRandomArray((yyvsp[(1) - (1)].integer));
-        printf("rand(n)\n");
-        printf("rand(%d) -> array ", (yyvsp[(1) - (1)].integer));
-        printArray((yyval.number).arrayNumbers, (yyval.number).arraySize, (yyval.number).type);
-        printf("\n");
-    }
+#line 218 "my_language.y"
+    {printf("Rule32 - rand(n)\n");}
     break;
 
   case 34:
-#line 394 "my_language.y"
-    {
-        (yyval.number).type = (yyvsp[(3) - (3)].number).type;
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        (yyval.number).arraySize = (yyvsp[(1) - (3)].integer);
-        (yyval.number).arrayNumbers = generateRandomArray((yyvsp[(1) - (3)].integer));
-        printf("rand(n,type)\n");
-        printf("rand(%d,%s) -> array ", (yyvsp[(1) - (3)].integer), (yyvsp[(3) - (3)].number).type);
-        printArray((yyval.number).arrayNumbers, (yyval.number).arraySize, (yyval.number).type);
-        printf("\n");
-    }
+#line 219 "my_language.y"
+    {printf("Rule33 - rand(n,type)\n");}
     break;
 
   case 35:
-#line 405 "my_language.y"
-    {
-        (yyval.number).type = "int";
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        (yyval.number).arraySize = (yyvsp[(5) - (5)].integer);
-        (yyval.number).arrayNumbers = generateRandomArrayWithBounds((yyvsp[(5) - (5)].integer), (yyvsp[(1) - (5)].integer), (yyvsp[(3) - (5)].integer));
-        printf("rand(x,y,n)\n");
-        printf("rand(%d,%d,%d) -> array ", (yyvsp[(1) - (5)].integer), (yyvsp[(3) - (5)].integer), (yyvsp[(5) - (5)].integer));
-        printArray((yyval.number).arrayNumbers, (yyval.number).arraySize, (yyval.number).type);
-        printf("\n");
-    }
+#line 220 "my_language.y"
+    {printf("Rule34 - rand(x,y,n)\n");}
     break;
 
   case 36:
-#line 416 "my_language.y"
-    {
-        (yyval.number).type = (yyvsp[(7) - (7)].number).type;
-        (yyval.number).value = 0;
-        (yyval.number).isArray = 1;
-        (yyval.number).arraySize = (yyvsp[(5) - (7)].integer);
-        (yyval.number).arrayNumbers = generateRandomArrayWithBounds((yyvsp[(5) - (7)].integer), (yyvsp[(1) - (7)].integer), (yyvsp[(3) - (7)].integer));
-        printf("rand(x,y,n,type)\n");
-        printf("rand(%d,%d,%d,%s) -> array ", (yyvsp[(1) - (7)].integer), (yyvsp[(3) - (7)].integer), (yyvsp[(5) - (7)].integer), (yyvsp[(7) - (7)].number).type);
-        printArray((yyval.number).arrayNumbers, (yyval.number).arraySize, (yyval.number).type);
-        printf("\n");
-    }
+#line 221 "my_language.y"
+    {printf("Rule35 - rand(x,y,n,type)\n");}
     break;
 
   case 37:
-#line 427 "my_language.y"
-    {
-        (yyval.number).type = "int";
-        (yyval.number).value = generateRandomNumber();
-        (yyval.number).isArray = 0;
-        (yyval.number).arraySize = 0;
-        printf("rand() -> number %d\n", (yyval.number).value);
-    }
+#line 222 "my_language.y"
+    {printf("Rule36 - rand()\n");}
     break;
 
   case 38:
-#line 437 "my_language.y"
-    {
-        (yyval.number).type = "int";
-    }
+#line 226 "my_language.y"
+    {printf("Rule37 - rand type int\n");}
     break;
 
   case 39:
-#line 440 "my_language.y"
-    {
-        (yyval.number).type = "bin";
-    }
+#line 227 "my_language.y"
+    {printf("Rule38 - rand type bin\n");}
     break;
 
   case 40:
-#line 443 "my_language.y"
-    {
-        (yyval.number).type = "hex";
-    }
+#line 228 "my_language.y"
+    {printf("Rule39 - rand type hex\n");}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1922 "y.tab.c"
+#line 1693 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -2132,7 +1903,7 @@ yyreturn:
 }
 
 
-#line 447 "my_language.y"
+#line 230 "my_language.y"
 
 
 
@@ -2146,353 +1917,37 @@ int main(){
 }
 
 
-char* intToBinary(int n) {
-    int bit_count = 0;
-    int temp = n;
-    while (temp != 0) {
-        temp /= 2;
-        bit_count++;
+// -----------
+char *int_to_binary(int n) {
+    // Určení počtu bitů pro reprezentaci čísla
+    int num_bits = sizeof(int) * 8;
+    
+    // Dynamická alokace řetězce pro binární reprezentaci
+    char *binary = malloc(num_bits + 2);  // +2 pro "b" a nulový ukončovací znak
+    if (!binary) {
+        fprintf(stderr, "Chyba při alokaci paměti\n");
+        //exit(EXIT_FAILURE);
     }
-    bit_count = bit_count == 0 ? 1 : bit_count;
-    char* binary_str = (char*)malloc(sizeof(char) * (bit_count + 1));
-    memset(binary_str, '0', bit_count);
-    binary_str[bit_count] = '\0';
-
-    int i = bit_count - 1;
-    while (n != 0) {
-        binary_str[i--] = (n % 2) + '0';
-        n /= 2;
+    
+    // Nastavení řetězce na "b" na začátku
+    binary[0] = 'b';
+    
+    // Nastavení posledního znaku na nulový ukončovací znak
+    binary[num_bits + 1] = '\0';
+    
+    // Výpočet binárního řetězce pro dané číslo
+    for (int i = num_bits; i >= 0; i--) {
+        binary[i] = (n & 1) + '0';
+        n >>= 1;
     }
-    int first_nonzero_index = 0;
-    while (binary_str[first_nonzero_index] == '0' && first_nonzero_index < bit_count - 1) {
-        first_nonzero_index++;
+    
+    // Odstranění přebytečných nul na začátku
+    int i = 0;
+    while (binary[i] == '0' && binary[i+1] != '\0') {
+        i++;
     }
-    char* result = (char*)malloc(sizeof(char) * (bit_count - first_nonzero_index + 2));
-    sprintf(result, "b%s", &binary_str[first_nonzero_index]);
-    free(binary_str);
-    return result;
+    memmove(binary, binary+i, strlen(binary)-i+1);  // +1 pro nulový ukončovací znak
+    
+    return binary;
 }
-
-char* intToHexa(int n) {
-    char* hexa = malloc(sizeof(char) * 20);
-    sprintf(hexa, "0x%X", n);
-    return hexa;
-}
-
-struct Number plusOperation(struct Number firstNumber, struct Number secondNumber) {
-    // PLUS:
-    struct Number result;
-    if (strcmp(secondNumber.type, "none") == 0) {
-        result = firstNumber;   
-    } else if (firstNumber.isArray && secondNumber.isArray) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = 0;
-        if(firstNumber.arraySize == secondNumber.arraySize) {
-            size = firstNumber.arraySize;
-        } else {
-            //error
-            yyerror("Nelze provádět operace mezi různě velkými poli!");
-            exit(1);
-        }
-        result.arraySize = size;
-        result.arrayNumbers = sumTwoArrays(firstNumber.arrayNumbers, secondNumber.arrayNumbers, size);
-    } else if (firstNumber.isArray && !(secondNumber.isArray)) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = firstNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = sumNumWithArray(secondNumber.value, firstNumber.arrayNumbers, size);
-    } else if (!(firstNumber.isArray) && secondNumber.isArray) {
-        result.type = secondNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = secondNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = sumNumWithArray(firstNumber.value, secondNumber.arrayNumbers, size);
-    } else {
-        result.type = firstNumber.type;
-        result.value = firstNumber.value + secondNumber.value;
-        result.isArray = 0;
-        result.arraySize = 0;
-    }
-    return result;
-}
-
-struct Number multiplyOperation(struct Number firstNumber, struct Number secondNumber) {
-    // MULTIPLY:
-    struct Number result;
-    if (strcmp(secondNumber.type, "none") == 0) {
-        result = firstNumber;   
-    } else if (firstNumber.isArray && secondNumber.isArray) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = 0;
-        if(firstNumber.arraySize == secondNumber.arraySize) {
-            size = firstNumber.arraySize;
-        } else {
-            //error
-            yyerror("Nelze provádět operace mezi různě velkými poli!");
-            exit(1);
-        }
-        result.arraySize = size;
-        result.arrayNumbers = multiplyTwoArrays(firstNumber.arrayNumbers, secondNumber.arrayNumbers, size);
-    } else if (firstNumber.isArray && !(secondNumber.isArray)) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = firstNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = multiplyNumWithArray(secondNumber.value, firstNumber.arrayNumbers, size);
-    } else if (!(firstNumber.isArray) && secondNumber.isArray) {
-        result.type = secondNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = secondNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = multiplyNumWithArray(firstNumber.value, secondNumber.arrayNumbers, size);
-    } else {
-        result.type = firstNumber.type;
-        result.value = firstNumber.value * secondNumber.value;
-        result.isArray = 0;
-        result.arraySize = 0;
-    }
-    return result;
-}
-
-struct Number tildeOperation(struct Number firstNumber, struct Number secondNumber) {
-    // TILDE:
-    struct Number result;
-    if (strcmp(secondNumber.type, "none") == 0) {
-        result = firstNumber;   
-    } else if (firstNumber.isArray && secondNumber.isArray) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = 0;
-        if(firstNumber.arraySize == secondNumber.arraySize) {
-            size = firstNumber.arraySize;
-        } else {
-            //error
-            yyerror("Nelze provádět operace mezi různě velkými poli!");
-            exit(1);
-        }
-        result.arraySize = size;
-        result.arrayNumbers = tildeTwoArrays(firstNumber.arrayNumbers, secondNumber.arrayNumbers, size);
-    } else if (firstNumber.isArray && !(secondNumber.isArray)) {
-        result.type = firstNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = firstNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = tildeNumWithArray(secondNumber.value, firstNumber.arrayNumbers, size);
-    } else if (!(firstNumber.isArray) && secondNumber.isArray) {
-        result.type = secondNumber.type;
-        result.value = 0;
-        result.isArray = 1;
-        int size = secondNumber.arraySize;
-        result.arraySize = size;
-        result.arrayNumbers = tildeNumWithArray(firstNumber.value, secondNumber.arrayNumbers, size);
-    } else {
-        result.type = firstNumber.type;
-        result.value = ((firstNumber.value * secondNumber.value) + firstNumber.value + secondNumber.value);
-        result.isArray = 0;
-        result.arraySize = 0;
-    }
-    return result;
-}
-
-int* sumTwoArrays(int *firstArray, int *secondArray, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = firstArray[i] + secondArray[i];
-    }
-    return resultArray;
-}
-
-int* sumNumWithArray(int number, int *array, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = array[i] + number;
-    }
-    return resultArray;
-}
-
-int* multiplyTwoArrays(int *firstArray, int *secondArray, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = firstArray[i] * secondArray[i];
-    }
-    return resultArray;
-}
-
-int* multiplyNumWithArray(int number, int *array, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = array[i] * number;
-    }
-    return resultArray;
-}
-
-int* tildeTwoArrays(int *firstArray, int *secondArray, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = (firstArray[i] * secondArray[i]) + firstArray[i] + secondArray[i];
-    }
-    return resultArray;
-}
-
-int* tildeNumWithArray(int number, int *array, int size) {
-    int* resultArray = malloc(size * sizeof(int));
-    for (int i = 0; i < size; i++) {
-        resultArray[i] = (number * array[i]) + number + array[i];
-    }
-    return resultArray;
-}
-
-char* getNumberType(char* firstType, char* secondType) {
-    if (strcmp(secondType, "array") == 0) {
-        return secondType;
-    } else {
-        return firstType;
-    }
-}
-
-int generateRandomNumber() {
-    int min = 0;
-    int max = 100;
-    srand(time(NULL));
-    int randomNumber = (rand() % (max - min + 1)) + min;
-    return randomNumber;
-}
-
-int generateRandomNumberWithBounds(int min, int max) {
-    srand(time(NULL));
-    int randomNumber = (rand() % (max - min + 1)) + min;
-    return randomNumber;
-}
-
-int* generateRandomArray(int n) {
-    int min = 0;
-    int max = 100;
-    int* array = malloc(n * sizeof(int));
-    srand(time(NULL));
-    for (int i = 0; i < n; i++) {
-        array[i] = (rand() % (max - min + 1)) + min;
-    }
-    return array;
-}
-
-int* generateRandomArrayWithBounds(int n, int min, int max) {
-    int* array = malloc(n * sizeof(int));
-    srand(time(NULL));
-    for (int i = 0; i < n; i++) {
-        array[i] = (rand() % (max - min + 1)) + min;
-    }
-    return array;
-}
-
-int* addNumberToArray(int number, int *arrayNumbers, int arraySize) {
-    arrayNumbers = (int*) realloc(arrayNumbers, (arraySize + 1) * sizeof(int));
-    arrayNumbers[arraySize] = number;
-    return arrayNumbers;
-}
-
-void printResult(struct Number number) {
-    printf("\n");
-    if (number.isArray == 0) {
-        if (strcmp(number.type, "int") == 0) {
-            printf("RESULT: %d\n", number.value);
-        } else if (strcmp(number.type, "bin") == 0) {
-            char* binary = intToBinary(number.value);
-            printf("RESULT: %s (hodnota %d)\n", binary, number.value);
-            //free(binary);
-        } else if (strcmp(number.type, "hex") == 0) {
-            char* hexa = intToHexa(number.value);
-            printf("RESULT: %s (hodnota %d)\n", hexa, number.value);
-            //free(hexa);
-        } else {
-            printf("RESULT: %d (Ani jedno ze 3)\n", number.value);
-        }
-    } else {
-        if (strcmp(number.type, "int") == 0) {
-            printf("RESULT: ");
-            printArrayInt(number.arrayNumbers, number.arraySize);
-            printf("\n");
-        } else if (strcmp(number.type, "bin") == 0) {
-            printf("RESULT: ");
-            printArrayBin(number.arrayNumbers, number.arraySize);
-            printf(" - int hodnoty: ");
-            printArrayInt(number.arrayNumbers, number.arraySize);
-            printf("\n");
-        } else if (strcmp(number.type, "hex") == 0) {
-            printf("RESULT: ");
-            printArrayHexa(number.arrayNumbers, number.arraySize);
-            printf(" - int hodnoty: ");
-            printArrayInt(number.arrayNumbers, number.arraySize);
-            printf("\n");
-        } else {
-            printf("RESULT: ");
-            printArrayInt(number.arrayNumbers, number.arraySize);
-            printf(" (Ani jedno ze 3)\n");
-        }
-    }
-}
-
-void printNumber(int value, char* numberType) {
-    if (strcmp(numberType, "int") == 0) {
-        printf("%d", value);
-    } else if (strcmp(numberType, "bin") == 0) {
-        printf("%s", intToBinary(value));
-    } else if (strcmp(numberType, "hex") == 0) {
-        printf("%s", intToHexa(value));
-    }
-}
-
-void printArray(int *arrayNumbers, int arraySize, char* numberType) {
-    if (strcmp(numberType, "int") == 0) {
-        printArrayInt(arrayNumbers, arraySize);
-    } else if (strcmp(numberType, "bin") == 0) {
-        printArrayBin(arrayNumbers, arraySize);
-    } else if (strcmp(numberType, "hex") == 0) {
-        printArrayHexa(arrayNumbers, arraySize);
-    }
-}
-
-void printArrayInt(int *arrayNumbers, int arraySize) {
-    printf("[");
-    for (int i = 0; i < arraySize; i++) {
-        printf("%d", arrayNumbers[i]);
-        if (i != arraySize - 1) {
-            printf(", ");
-        }
-    }
-    printf("]");
-}
-
-void printArrayBin(int *arrayNumbers, int arraySize) {
-    printf("[");
-    for (int i = 0; i < arraySize; i++) {
-        printf("%s", intToBinary(arrayNumbers[i]));
-        if (i != arraySize - 1) {
-            printf(", ");
-        }
-    }
-    printf("]");
-}
-
-void printArrayHexa(int *arrayNumbers, int arraySize) {
-    printf("[");
-    for (int i = 0; i < arraySize; i++) {
-        printf("%s", intToHexa(arrayNumbers[i]));
-        if (i != arraySize - 1) {
-            printf(", ");
-        }
-    }
-    printf("]");
-}
-
 

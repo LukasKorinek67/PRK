@@ -1,280 +1,140 @@
 syntax error
-Void line detected.
 syntax error
 syntax error
-Rule13 - INTEGER (23)
+INTEGER (23)
 error: 23a
 
 error: .67
 
-Rule13 - INTEGER (12)
+INTEGER (12)
 error: 12a
 
-Rule13 - INTEGER (0)
+INTEGER (0)
 error: 0xxA
 
-Rule15 - HEXA (0x12CF)
+HEXA (0x12CF) -> int hodnota 4815
 error: 0x12CFZ
 
 error: bb010001
 
 syntax error
-Void line detected.
 syntax error
-syntax error
-Rule22
 error: [1.5,2.1,4.3,7.2,12.1]
 
-Rule26
-Rule27
-Rule27
 error: [0xAB, 0x88, 0xFF1Z, 0x1F]
 
-Rule24
-Rule25
 syntax error
 syntax error
 syntax error
 syntax error
-Void line detected.
 syntax error
 syntax error
-Rule13 - INTEGER (0)
-Rule11
-Rule7
-Rule9
-Rule6
-Line detected.
+INTEGER (0)
 syntax error
 syntax error
-Void line detected.
 syntax error
 syntax error
-Rule13 - INTEGER (35)
-Rule11
-Rule7
-Line detected.
+INTEGER (35)
 syntax error
 syntax error
-Rule13 - INTEGER (9)
-Rule11
-Rule7
-Rule14 - BINARY (b1001)
-Rule11
-Rule7
-Rule15 - HEXA (0xC44B)
-Rule11
-Rule7
-Line detected.
-syntax error
-Void line detected.
+INTEGER (9)
+BINARY (b1001) -> int hodnota 9
+HEXA (0xC44B) -> int hodnota 50251
 syntax error
 syntax error
-Rule13 - INTEGER (2)
-Line detected.
+syntax error
+INTEGER (2)
 syntax error
 syntax error
-Rule14 - BINARY (b0100110)
-Rule14 - BINARY (b111111)
-Line detected.
-syntax error
-Void line detected.
+BINARY (b100110) -> int hodnota 38
+BINARY (b111111) -> int hodnota 63
 syntax error
 syntax error
-Rule13 - INTEGER (0)
-Rule11
-Rule7
 syntax error
-Rule13 - INTEGER (100)
-Rule11
-Rule7
+INTEGER (0)
 syntax error
-Rule13 - INTEGER (10)
+INTEGER (100)
 syntax error
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (10)
-Rule11
-Rule7
+INTEGER (10)
 syntax error
-Void line detected.
+INTEGER (10)
+INTEGER (10)
 syntax error
 syntax error
-Rule22
-Rule23
-Rule19 - int array
-Rule18
-Rule16
-Rule11
-Rule7
-Line detected.
+syntax error
+INT array [1, 3]
+INT array [3, 4, 5]
+Operator +
+Nelze provádět operace mezi různě velkými poli!
+error: [1,3]+[3,4,5]
+
+INT array [3]
+HEX array [0xAA, 0xBA] -> int hodnoty [170, 186]
+Operator * 
+Nelze provádět operace mezi různě velkými poli!
+error: [3]*[0xAA,0xBA]
+
+INT array [3, 4]
+INT array [1, 9]
+INT array [12, 12, 12]
+Operator * 
+Nelze provádět operace mezi různě velkými poli!
+error: [3,4]*[1,9]*[12,12,12]
+
+INT array [1, 2]
 syntax error
 syntax error
-Rule22
-Rule23
-Rule23
-Rule23
-Rule19 - int array
-Rule18
-Rule16
-Rule11
-Rule7
-Rule24
-Rule25
-Rule25
-Rule25
-Rule20 - bin array
-Rule18
-Rule16
-Rule11
-Rule7
-Line detected.
-syntax error
-Void line detected.
+INT array [2, 3, 33, 88]
+BIN array [b1010, b11, b1011001, b101] -> int hodnoty [10, 3, 89, 5]
 syntax error
 syntax error
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Rule11
-Rule7
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (10)
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
 syntax error
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule13 - INTEGER (10)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
+INTEGER (10)
+INTEGER (10)
+INTEGER (10)
+Operator * 
+Operator +
+Závorky
+INTEGER (10)
+INTEGER (10)
+Operator +
 syntax error
-Rule13 - INTEGER (3)
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (5)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Line detected.
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
+INTEGER (10)
+INTEGER (10)
+INTEGER (10)
+Operator * 
+Operator +
 syntax error
-Rule13 - INTEGER (2)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (4)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Rule11
-Rule7
-Rule13 - INTEGER (3)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule13 - INTEGER (7)
-Rule11
-Rule7
-Rule9
-Rule6
-Rule5
-Rule4 - operator +
-Rule3
-Rule12 - závorky
-Rule11
-Rule7
-Rule9
-Rule6
-Rule9
-Rule8 - operator * 
-Rule6
-Rule5
-Rule3
+INTEGER (3)
+INTEGER (3)
+INTEGER (2)
+INTEGER (5)
+Operator +
+Závorky
+Operator * 
 syntax error
-Void line detected.
+INTEGER (2)
+INTEGER (4)
+Operator +
+Závorky
+INTEGER (3)
+INTEGER (7)
+Operator +
+Závorky
+Operator * 
+syntax error
 syntax error
 syntax error
 error: rand(ashk)
 
-Rule38 - rand type bin
-Rule29 - rand(type)
+rand(type)
+rand(bin) -> number b11001
 error: rand(binn)
 
 error: rand(3,8.5)
 
-Rule39 - rand type hex
-Rule31 - rand(x,y,type)
+rand(x,y,type)
+rand(1,200,hex) -> number 0xB3
 error: rand(1,200,hexa)
 
 error: rand(312.3)
@@ -282,9 +142,8 @@ error: rand(312.3)
 error: rand(12a,hex)
 
 syntax error
-Rule37 - rand type int
-Rule35 - rand(x,y,n,type)
+rand(x,y,n,type)
+rand(100,1000,40,int) -> array [741, 406, 758, 228, 445, 536, 985, 796, 835, 643, 847, 141, 207, 866, 548, 455, 627, 886, 200, 384, 246, 635, 165, 209, 570, 156, 859, 652, 574, 941, 476, 390, 898, 636, 541, 395, 442, 597, 188, 789]
 error: rand(100,1000,40,integer)
 
-Void line detected.
 syntax error
