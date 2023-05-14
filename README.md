@@ -1,5 +1,7 @@
 # PRK - vlastní jazyk
 
+##### Popis jazyka:
+
 1. OPERACE - vlastní operace ~ -> daný dvě čísla vynásobí a přičte k výsledku hodnoty obou čísel -> a~b = a*b + a + b
 - celkově tedy operace +, * a ~
 - pririty jsou řešeny následovně:
@@ -23,3 +25,8 @@
 - rand(n,type) - pole, n hodnot, určený datový typ
 - rand(x,y,n) - výsledkem bude random pole intů o délce n hodnot, x a y jsou horní a dolní hranice
 - rand(x,y,n,type) - pole čísel se specifikovaným datovým typem, n hodnot, určená horní a dolní hranice
+
+
+###### Výstupy:
+
+Výstupy jsou ve složce bin v reportech. Vždy vypsáno, co se načetlo a následně výsledek. U datových typů binary a hexa si vypisuji i integer hodnoty - pro ověření výsledku. Testoval jsem všechny možné varianty a vše projde/neprojde přesně jak má.
